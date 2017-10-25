@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
+    <div class="container" style="margin-left:0px">
+      <div class="navbar-header">
          <!--<cuppa-slidemenu [menulist]="menuItemsArray" (open)="onMenuOpen()" (close)="onMenuClose()" (onItemSelect)="onItemSelect($event)"></cuppa-slidemenu>-->
          <cuppa-slidemenu [menulist]="menuItemsArray" (open)="onMenuOpen()" (close)="onMenuClose()"></cuppa-slidemenu>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -12,8 +12,8 @@
           <a class="navbar-brand" href="https://cuppalabs.github.io/cuppa-ng2-slidemenu/">
           <img alt="Brand" src="assets/img/cuppa-logo.png">
           IT Service Desk Menu</a>
-        </div>
        </div>
+     </div>
     </nav>
   <!--  <div class="jumbotron col-md-12">
       <div class="col-md-6">
@@ -24,8 +24,6 @@
 
         </div>
     </div> -->
-    <div class="container jumbotron">
-     <p > <a routerLink="desk"> Hi this is main page </a></p>        
+    <div class="container-fluid" style="margin-top:5rem">       
+     <router-outlet></router-outlet>
     </div>
-
-    <router-outlet></router-outlet>

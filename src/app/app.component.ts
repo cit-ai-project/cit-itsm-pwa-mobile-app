@@ -4,6 +4,7 @@
 import {
   Component,
   OnInit,
+  ContentChild,
   ViewEncapsulation
 } from '@angular/core';
 
@@ -22,6 +23,9 @@ import {
   //template : `<html><body> His this is app comp </body></html>`,
 })
 export class AppComponent implements OnInit {
+
+  /*@ContentChild("cuppa-slidemenu")
+  private sMenu : SlideMenu;*/
 
     private menuItemsArray: any[] = [
                             {"title":"Software / Application Request","link":"#",
@@ -63,13 +67,14 @@ export class AppComponent implements OnInit {
                             },
                         ];
 
-  constructor(
-    
-  ) {}
+  constructor() {}
+
   public onMenuClose(){
+    //this.sMenu.toggleOverlay();
     console.log("menu closed");
   }
   public onMenuOpen(){
+    //this.sMenu.menuToggle();
     console.log("menu Opened");
   }
   private onItemSelect(item:any){

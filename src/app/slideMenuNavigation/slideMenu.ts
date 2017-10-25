@@ -23,6 +23,7 @@ export class SlideMenu implements AfterViewInit{
     private overlayElem: any;
 
     constructor(private _elementRef : ElementRef, private sanitizer: DomSanitizer) {   
+        console.log("Overlay constructor");
         this.addOverlayElement();
     }
 
@@ -43,6 +44,7 @@ export class SlideMenu implements AfterViewInit{
          }
     }
     private closeMenu(){
+        console.log("Close menu");
          this.menuState = false; 
          this.overlayElem.style['opacity'] = 0;        
     }
@@ -53,24 +55,29 @@ export class SlideMenu implements AfterViewInit{
         item.expand = !item.expand;
     }
     private addOverlayElement(){
-        this.overlayElem = document.createElement('div');
-        this.overlayElem.classList.add('cuppa-menu-overlay');
-        this.overlayElem.style['position'] = 'fixed';
-        this.overlayElem.style['background'] = 'rgba(0, 0, 0, 0.7)';
-        this.overlayElem.style['top'] = 0;
-        this.overlayElem.style['left'] = 0;
-        this.overlayElem.style['right'] = 0;
-        this.overlayElem.style['bottom'] = 0;
-        this.overlayElem.style['opacity'] = 0;
-        this.overlayElem.style['pointer-events'] = 'none';
-        this.overlayElem.style['transition'] = 'all .2s linear';
-        document.getElementsByTagName('body')[0].appendChild(this.overlayElem);
+        console.log("addOverlay elem");
+        if (this.overlayElem == null){
+            this.overlayElem = document.createElement('div');
+            this.overlayElem.classList.add('cuppa-menu-overlay');
+            this.overlayElem.style['position'] = 'fixed';
+            this.overlayElem.style['background'] = 'rgba(0, 0, 0, 0.7)';
+            this.overlayElem.style['top'] = 0;
+            this.overlayElem.style['left'] = 0;
+            this.overlayElem.style['right'] = 0;
+            this.overlayElem.style['bottom'] = 0;
+            this.overlayElem.style['opacity'] = 0;
+            this.overlayElem.style['pointer-events'] = 'none';
+            this.overlayElem.style['transition'] = 'all .2s linear';
+            document.getElementsByTagName('body')[0].appendChild(this.overlayElem);
+        }
     }
-    private toggleOverlay(){
+    public toggleOverlay(){
         if(this.overlayElem.style['opacity'] == 0){
+            console.log("Overlay closed");
             this.overlayElem.style['opacity'] = 1;
         }
         else if(this.overlayElem.style['opacity'] == 1){
+            console.log("Overlay opened");
             this.overlayElem.style['opacity'] = 0;
         }
     }
