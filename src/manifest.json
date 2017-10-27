@@ -1,0 +1,27 @@
+{
+    "short_name":"ServiceDesk",
+    "name": " Angular Service Desk PWA Demo",
+    "start_url":"/",
+
+    "theme_color":"#f48c5b",
+    "background_color":"#ffffff",
+
+    "display":"standalone",
+    "orientation":"potrait",
+
+    "icons":[
+        {
+            "src": "assets/img/cuppa-logo.png",
+            "sizes":{
+                "width" : 72,
+                "height": 72
+                    },
+            "type":"image/png"
+         
+        }
+    ]
+
+
+
+
+}
