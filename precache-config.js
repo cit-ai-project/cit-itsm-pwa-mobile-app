@@ -1,9 +1,9 @@
 var SWPrecacheWebpackPlugin =  require('sw-precache-webpack-plugin');
 
 module.exports = {
-navigateFallback : 'src/index.html',
+navigateFallback : '/index.html',
 navigateFallbackWhitelist : [/^(?!\/__)/],
-stripPrefix : 'src',
+stripPrefix : 'src/app',
 plugins:[
 
     new SWPrecacheWebpackPlugin({
@@ -11,10 +11,10 @@ plugins:[
         filename:'service-worker.js',
         staticFileGlobs:[
             'src/app/index.html',
-            'src/assets/**.js',
-            'src/assets/**.css'
+            'src/app/assets/**.js',
+            'src/app/assets/**.css'
         ],
-        stripPrefix:'src/assets/',
+        stripPrefix:'dist/assets/',
         mergeStaticConfigs:true
     })
 ]
