@@ -38,7 +38,7 @@
   </div>
   <script>
     if('serviceWorker' in navigator){
-      navigator.serviceWorker.register('/service-worker.js')
+      navigator.serviceWorker.register('service-worker.js')
       .then((registation) => {
         console.log('SW Registered');
       })

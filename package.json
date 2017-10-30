@@ -7,17 +7,17 @@
     "slide menu",
     "ng2 menu"
   ],
-  "author": "Pradeep Terli",
+  "author": "Clement Rajesh",
   "homepage": "",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --env=prod --ssl 1 --ssl-key \"D:\\nodejss\\pwa\\slidemenu\\sidebar\\node_modules\\browser-sync\\lib\\server\\certs\\server.key\" --ssl-cert \"D:\\nodejss\\pwa\\slidemenu\\sidebar\\node_modules\\browser-sync\\lib\\server\\certs\\server.crt\"",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "pwa":"ng build && sw-precache --prod --root=src/app --config=precache-config.js"
+    "pwa": "ng build sw-precache && --env=prod --config=precache-config.js --delete-output-path=false --output-path=docs"
   },
   "private": false,
   "dependencies": {
@@ -29,17 +29,19 @@
     "@angular/platform-browser": "^2.4.0",
     "@angular/platform-browser-dynamic": "^2.4.0",
     "@angular/router": "^3.4.0",
-    "core-js": "^2.4.1",
-    "rxjs": "^5.1.0",
-    "zone.js": "^0.7.6",
     "bootstrap": "*",
-    "font-awesome": "*"
+    "core-js": "^2.4.1",
+    "font-awesome": "*",
+    "rxjs": "^5.1.0",
+    "sw-precache-webpack-plugin-loader": "^1.0.2",
+    "zone.js": "^0.7.6"
   },
   "devDependencies": {
     "@angular/cli": "1.0.0-beta.32.3",
     "@angular/compiler-cli": "^2.4.0",
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
+    "build-asset": "^2.0.6",
     "codelyzer": "~2.0.0-beta.4",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",

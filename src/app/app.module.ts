@@ -13,8 +13,8 @@ import { ENV_PROVIDERS } from './environment';
 // App is our top level component
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
-import { SlideMenu } from './slideMenuNavigation/slideMenu';
-import { ClickOutsideDirective } from './slideMenuNavigation/clickOutside';
+import { SlideMenu } from './slideMenu';
+import { ClickOutsideDirective } from './clickOutside';
 import {DeskComponent} from './desk.component';
 import {HomeComponent} from './home.component';
 //routing import

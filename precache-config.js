@@ -1,21 +1,22 @@
-var SWPrecacheWebpackPlugin =  require('sw-precache-webpack-plugin');
+var SWPrecacheWebpackPlugin =  require('sw-precache-webpack-plugin-loader');
 
 module.exports = {
 navigateFallback : '/index.html',
 navigateFallbackWhitelist : [/^(?!\/__)/],
-stripPrefix : 'src/app',
+stripPrefix : 'docs',
+root:"docs/",
 plugins:[
 
     new SWPrecacheWebpackPlugin({
         cacheId:'servicedesk',
         filename:'service-worker.js',
         staticFileGlobs:[
-            'src/app/index.html',
-            'src/app/assets/**.js',
-            'src/app/assets/**.css'
+            'docs/index.html',
+            'docs/**.js',
+            'docs/**.css'
         ],
-        stripPrefix:'dist/assets/',
-        mergeStaticConfigs:true
+        stripPrefix:'docs/assets/',
+        mergeStaticsConfigs:true
     })
 ]
 
