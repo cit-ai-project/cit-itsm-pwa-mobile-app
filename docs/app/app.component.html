@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container" style="margin-left:0px">
+      <div class="navbar-header">
+         <!--<cuppa-slidemenu [menulist]="menuItemsArray" (open)="onMenuOpen()" (close)="onMenuClose()" (onItemSelect)="onItemSelect($event)"></cuppa-slidemenu>-->
+         <cuppa-slidemenu [menulist]="menuItemsArray" (open)="onMenuOpen()" (close)="onMenuClose()"></cuppa-slidemenu>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://cuppalabs.github.io/cuppa-ng2-slidemenu/">
+          <img alt="Brand" src="assets/img/cuppa-logo.png">
+          IT Service Desk Menu</a>
+       </div>
+     </div>
+    </nav>
+  <!--  <div class="jumbotron col-md-12">
+      <div class="col-md-6">
+
+        <h1 class="component-title">Service Desk</h1>
+        <h2>3M Service Desk Home Screen</h2>
+        <h4>Click on hamburger menu on top left  corner</h4>
+
+        </div>
+    </div> -->
+    <div class="container-fluid" style="margin-top:5rem">       
+     <router-outlet></router-outlet>
+    </div>
