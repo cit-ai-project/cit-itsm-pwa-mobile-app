@@ -12,8 +12,8 @@ plugins:[
         filename:'service-worker.js',
         staticFileGlobs:[
             'docs/index.html',
-            'docs/**.js',
-            'docs/**.css'
+            'docs/assets/**.js',
+            'docs/assets/**.css'
         ],
         stripPrefix:'docs/assets/',
         mergeStaticsConfigs:true
