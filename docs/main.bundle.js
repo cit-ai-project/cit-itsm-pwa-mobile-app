@@ -1,22 +1,9 @@
-webpackJsonp([2],{
+webpackJsonp([2,4],{
 
-/***/ "../../../../../src async recursive":
-/***/ (function(module, exports) {
-
-function webpackEmptyContext(req) {
-	throw new Error("Cannot find module '" + req + "'.");
-}
-webpackEmptyContext.keys = function() { return []; };
-webpackEmptyContext.resolve = webpackEmptyContext;
-module.exports = webpackEmptyContext;
-webpackEmptyContext.id = "../../../../../src async recursive";
-
-/***/ }),
-
-/***/ "../../../../../src/app/app.component.css":
+/***/ 206:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+exports = module.exports = __webpack_require__(62)();
 // imports
 
 
@@ -31,18 +18,122 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top\">\r\n    <div class=\"container\" style=\"margin-left:0px\">\r\n      <div class=\"navbar-header\">\r\n         <!--<cuppa-slidemenu [menulist]=\"menuItemsArray\" (open)=\"onMenuOpen()\" (close)=\"onMenuClose()\" (onItemSelect)=\"onItemSelect($event)\"></cuppa-slidemenu>-->\r\n         <cuppa-slidemenu [menulist]=\"menuItemsArray\" (open)=\"onMenuOpen()\" (close)=\"onMenuClose()\"></cuppa-slidemenu>\r\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\r\n            <span class=\"sr-only\">Toggle navigation</span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n          </button>\r\n          <a class=\"navbar-brand\" href=\"https://cuppalabs.github.io/cuppa-ng2-slidemenu/\">\r\n          <img alt=\"Brand\" src=\"assets/img/cuppa-logo.png\">\r\n          IT Service Desk Menu</a>\r\n       </div>\r\n     </div>\r\n    </nav>\r\n  <!--  <div class=\"jumbotron col-md-12\">\r\n      <div class=\"col-md-6\">\r\n\r\n        <h1 class=\"component-title\">Service Desk</h1>\r\n        <h2>3M Service Desk Home Screen</h2>\r\n        <h4>Click on hamburger menu on top left  corner</h4>\r\n\r\n        </div>\r\n    </div> -->\r\n    <div class=\"container-fluid\" style=\"margin-top:5rem\">       \r\n     <router-outlet></router-outlet>\r\n    </div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/app.component.ts":
+/***/ 302:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DeskComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+/*
+ * App Component
+ * Top Level Component
+ */
+var DeskComponent = (function () {
+    function DeskComponent() {
+    }
+    DeskComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
+            selector: 'desk',
+            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* ViewEncapsulation */].None,
+            styles: [__webpack_require__(206)],
+            template: __webpack_require__(528)
+        }), 
+        __metadata('design:paramtypes', [])
+    ], DeskComponent);
+    return DeskComponent;
+}());
+//# sourceMappingURL=C:/Users/clement.r/Documents/sidebar2/src/desk.component.js.map
+
+/***/ }),
+
+/***/ 303:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+/*
+ * App Component
+ * Top Level Component
+ */
+var HomeComponent = (function () {
+    function HomeComponent() {
+    }
+    HomeComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
+            selector: 'home',
+            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* ViewEncapsulation */].None,
+            styles: [__webpack_require__(206)],
+            template: __webpack_require__(529)
+        }), 
+        __metadata('design:paramtypes', [])
+    ], HomeComponent);
+    return HomeComponent;
+}());
+//# sourceMappingURL=C:/Users/clement.r/Documents/sidebar2/src/home.component.js.map
+
+/***/ }),
+
+/***/ 338:
+/***/ (function(module, exports) {
+
+function webpackEmptyContext(req) {
+	throw new Error("Cannot find module '" + req + "'.");
+}
+webpackEmptyContext.keys = function() { return []; };
+webpackEmptyContext.resolve = webpackEmptyContext;
+module.exports = webpackEmptyContext;
+webpackEmptyContext.id = 338;
+
+
+/***/ }),
+
+/***/ 339:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(429);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(461);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(465);
+
+
+
+
+if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* enableProdMode */])();
+}
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
+//# sourceMappingURL=C:/Users/clement.r/Documents/sidebar2/src/main.js.map
+
+/***/ }),
+
+/***/ 460:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -126,32 +217,32 @@ var AppComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: 'app',
             encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* ViewEncapsulation */].None,
-            styles: [__webpack_require__("../../../../../src/app/app.component.css")],
+            styles: [__webpack_require__(206)],
             //template  :`<router-outlet></router-outlet>` ,
-            template: __webpack_require__("../../../../../src/app/app.component.html"),
+            template: __webpack_require__(527),
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
 }());
-//# sourceMappingURL=D:/nodejss/pwa/slidemenu/sidebar/src/app.component.js.map
+//# sourceMappingURL=C:/Users/clement.r/Documents/sidebar2/src/app.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.module.ts":
+/***/ 461:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("../../../core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__slideMenu__ = __webpack_require__("../../../../../src/app/slideMenu.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__clickOutside__ = __webpack_require__("../../../../../src/app/clickOutside.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__desk_component__ = __webpack_require__("../../../../../src/app/desk.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__home_component__ = __webpack_require__("../../../../../src/app/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(419);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(425);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(460);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__slideMenu__ = __webpack_require__(464);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__clickOutside__ = __webpack_require__(463);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__desk_component__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__home_component__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_routing__ = __webpack_require__(462);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -199,17 +290,17 @@ var AppModule = (function () {
     ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=D:/nodejss/pwa/slidemenu/sidebar/src/app.module.js.map
+//# sourceMappingURL=C:/Users/clement.r/Documents/sidebar2/src/app.module.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.routing.ts":
+/***/ 462:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__("../../../router/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__desk_component__ = __webpack_require__("../../../../../src/app/desk.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_component__ = __webpack_require__("../../../../../src/app/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(449);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__desk_component__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_component__ = __webpack_require__(303);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return routing; });
 
 
@@ -220,15 +311,15 @@ var appRoutes = [
     { path: 'desk', component: __WEBPACK_IMPORTED_MODULE_1__desk_component__["a" /* DeskComponent */] }
 ];
 var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */].forRoot(appRoutes);
-//# sourceMappingURL=D:/nodejss/pwa/slidemenu/sidebar/src/app.routing.js.map
+//# sourceMappingURL=C:/Users/clement.r/Documents/sidebar2/src/app.routing.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/clickOutside.ts":
+/***/ 463:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClickOutsideDirective; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -273,106 +364,16 @@ var ClickOutsideDirective = (function () {
     return ClickOutsideDirective;
     var _a;
 }());
-//# sourceMappingURL=D:/nodejss/pwa/slidemenu/sidebar/src/clickOutside.js.map
+//# sourceMappingURL=C:/Users/clement.r/Documents/sidebar2/src/clickOutside.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/desk.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"container-fluid\">\r\n     <h2>Desktop Issue Request Form</h2>\r\n<form>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-6 mb-3\">\r\n      <label for=\"validationServer01\">Asset Id#</label>\r\n      <input type=\"text\" class=\"form-control is-valid\" id=\"validationServer01\" placeholder=\"Asset Id\" value=\"Key in Asset Id\" required>\r\n    </div>\r\n    <div class=\"col-md-6 mb-3\">\r\n      <label for=\"validationServer02\">Location</label>\r\n      <input type=\"text\" class=\"form-control is-valid\" id=\"validationServer02\" placeholder=\"Location\" value=\"Location\" required>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-6 mb-3\">\r\n      <label for=\"validationServer03\">City</label>\r\n      <input type=\"text\" class=\"form-control is-invalid\" id=\"validationServer03\" placeholder=\"City\" required>\r\n      <div class=\"invalid-feedback\">\r\n        Please provide a valid city.\r\n      </div>\r\n    </div>\r\n    <div class=\"col-md-3 mb-3\">\r\n      <label for=\"validationServer04\">State</label>\r\n      <input type=\"text\" class=\"form-control is-invalid\" id=\"validationServer04\" placeholder=\"State\" required>\r\n      <div class=\"invalid-feedback\">\r\n        Please provide a valid state.\r\n      </div>\r\n    </div>\r\n    <div class=\"col-md-3 mb-3\">\r\n      <label for=\"validationServer05\">Zip</label>\r\n      <input type=\"text\" class=\"form-control is-invalid\" id=\"validationServer05\" placeholder=\"Zip\" required>\r\n      <div class=\"invalid-feedback\">\r\n        Please provide a valid zip.\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <button class=\"btn btn-primary\" type=\"submit\">Submit form</button>\r\n</form>\r\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/desk.component.ts":
+/***/ 464:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DeskComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-/*
- * App Component
- * Top Level Component
- */
-var DeskComponent = (function () {
-    function DeskComponent() {
-    }
-    DeskComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
-            selector: 'desk',
-            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* ViewEncapsulation */].None,
-            styles: [__webpack_require__("../../../../../src/app/app.component.css")],
-            template: __webpack_require__("../../../../../src/app/desk.component.html")
-        }), 
-        __metadata('design:paramtypes', [])
-    ], DeskComponent);
-    return DeskComponent;
-}());
-//# sourceMappingURL=D:/nodejss/pwa/slidemenu/sidebar/src/desk.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/home.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<h2> Hi this is home page </h2> "
-
-/***/ }),
-
-/***/ "../../../../../src/app/home.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-/*
- * App Component
- * Top Level Component
- */
-var HomeComponent = (function () {
-    function HomeComponent() {
-    }
-    HomeComponent = __decorate([
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
-            selector: 'home',
-            encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* ViewEncapsulation */].None,
-            styles: [__webpack_require__("../../../../../src/app/app.component.css")],
-            template: __webpack_require__("../../../../../src/app/home.component.html")
-        }), 
-        __metadata('design:paramtypes', [])
-    ], HomeComponent);
-    return HomeComponent;
-}());
-//# sourceMappingURL=D:/nodejss/pwa/slidemenu/sidebar/src/home.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/slideMenu.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("../../../platform-browser/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(82);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SlideMenu; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -467,8 +468,8 @@ var SlideMenu = (function () {
     SlideMenu = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* Component */])({
             selector: 'cuppa-slidemenu',
-            template: __webpack_require__("../../../../../src/app/slidemenu.template.html"),
-            styles: [__webpack_require__("../../../../../src/app/slidemenu.styles.scss")]
+            template: __webpack_require__(530),
+            styles: [__webpack_require__(521)]
         }), 
         __metadata('design:paramtypes', [(typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* ElementRef */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* ElementRef */]) === 'function' && _d) || Object, (typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */]) === 'function' && _e) || Object])
     ], SlideMenu);
@@ -482,14 +483,26 @@ var SlideMenu = (function () {
   exports:      [SlideMenu, ClickOutsideDirective]
 })
 export class SlideMenuModule { }*/ 
-//# sourceMappingURL=D:/nodejss/pwa/slidemenu/sidebar/src/slideMenu.js.map
+//# sourceMappingURL=C:/Users/clement.r/Documents/sidebar2/src/slideMenu.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/slidemenu.styles.scss":
+/***/ 465:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+var environment = {
+    production: true
+};
+//# sourceMappingURL=C:/Users/clement.r/Documents/sidebar2/src/environment.js.map
+
+/***/ }),
+
+/***/ 521:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+exports = module.exports = __webpack_require__(62)();
 // imports
 
 
@@ -504,53 +517,41 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/slidemenu.template.html":
+/***/ 527:
+/***/ (function(module, exports) {
+
+module.exports = "<nav class=\"navbar navbar-default navbar-fixed-top\">\r\n    <div class=\"container\" style=\"margin-left:0px\">\r\n      <div class=\"navbar-header\">\r\n         <!--<cuppa-slidemenu [menulist]=\"menuItemsArray\" (open)=\"onMenuOpen()\" (close)=\"onMenuClose()\" (onItemSelect)=\"onItemSelect($event)\"></cuppa-slidemenu>-->\r\n         <cuppa-slidemenu [menulist]=\"menuItemsArray\" (open)=\"onMenuOpen()\" (close)=\"onMenuClose()\"></cuppa-slidemenu>\r\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\r\n            <span class=\"sr-only\">Toggle navigation</span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n            <span class=\"icon-bar\"></span>\r\n          </button>\r\n          <a class=\"navbar-brand\" href=\"https://cuppalabs.github.io/cuppa-ng2-slidemenu/\">\r\n          <img alt=\"Brand\" src=\"assets/img/cuppa-logo.png\">\r\n          IT Service Desk Menu</a>\r\n       </div>\r\n     </div>\r\n    </nav>\r\n  <!--  <div class=\"jumbotron col-md-12\">\r\n      <div class=\"col-md-6\">\r\n\r\n        <h1 class=\"component-title\">Service Desk</h1>\r\n        <h2>3M Service Desk Home Screen</h2>\r\n        <h4>Click on hamburger menu on top left  corner</h4>\r\n\r\n        </div>\r\n    </div> -->\r\n    <div class=\"container-fluid\" style=\"margin-top:5rem\">       \r\n     <router-outlet></router-outlet>\r\n    </div>"
+
+/***/ }),
+
+/***/ 528:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container-fluid\">\r\n     <h2>Desktop Issue Request Form</h2>\r\n<form>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-6 mb-3\">\r\n      <label for=\"validationServer03\">Asset Id</label>\r\n      <input type=\"text\" class=\"form-control is-invalid\" id=\"validationServer03\" placeholder=\"Asset Id\" required>\r\n    </div>\r\n    <div class=\"col-md-3 mb-3\">\r\n      <label for=\"validationServer04\">Severity</label>\r\n      <input type=\"text\" class=\"form-control is-invalid\" id=\"validationServer04\" placeholder=\"Severity\" required>\r\n    </div>\r\n  </div>\r\n   <div class=\"row\">\r\n    <div class=\"col-md-6 mb-3\">\r\n      <label for=\"validationServer03\">Category</label>\r\n      <input type=\"text\" class=\"form-control is-invalid\" id=\"validationServer03\" placeholder=\"Category\" required>\r\n    </div>\r\n    <div class=\"col-md-3 mb-3\">\r\n      <label for=\"validationServer04\">Sub Category</label>\r\n      <input type=\"text\" class=\"form-control is-invalid\" id=\"validationServer04\" placeholder=\"Sub Category\" required>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\">\r\n    <div class=\"col-md-6 mb-3\">\r\n      <label for=\"validationServer03\">Subject</label>\r\n      <input type=\"text\" class=\"form-control is-invalid\" id=\"validationServer03\" placeholder=\"Subject\" required>\r\n    </div>\r\n    <div class=\"col-md-3 mb-3\">\r\n      <label for=\"validationServer04\">Date</label>\r\n      <input type=\"text\" class=\"form-control is-invalid\" id=\"validationServer04\" placeholder=\"Date\" required>\r\n      \r\n    </div>\r\n\t</div>\r\n\t<div class=\"row\">\r\n    <div class=\"col-md-3 mb-3\">\r\n      <label for=\"validationServer05\">Descritpion</label>\r\n\t  <textarea class=\"form-control is-invalid\" id=\"validationServer05\" placeholder=\"Descritpion\" required> </textarea>\r\n      </div>\r\n  </div>\r\n  <div class=\"row\"></div>\r\n  \r\n\r\n  <button class=\"btn btn-primary\" type=\"submit\">Submit form</button>\r\n</form>\r\n</div>"
+
+/***/ }),
+
+/***/ 529:
+/***/ (function(module, exports) {
+
+module.exports = "<h2> Hi this is home page </h2> "
+
+/***/ }),
+
+/***/ 530:
 /***/ (function(module, exports) {
 
 module.exports = "<span (clickOutside)=\"closeMenu()\">\r\n    <button (click)=\"menuToggle()\" class=\"hamburger hamburger-arrow-left\" [ngClass]=\"{'is-active': menuState, '': !menuState}\">\r\n        <span class=\"icon\"></span>\r\n    </button>\r\n    \r\n<div class=\"menu-container cuppa-menu\" [ngClass]=\"{'show-menu': menuState, 'hide-menu': !menuState}\">\r\n    <ul>\r\n        <!--<li *ngFor=\"let item of menulist\" (click)=\"onItemClick(item)\">-->\r\n            <li *ngFor=\"let item of menulist\">\r\n            <a (click)=\"toggleSubMenu(item)\">{{item.title}} \r\n                <i *ngIf=\"item.subItems && !item.expand\" class=\"fa fa-angle-down\"></i>\r\n                <i *ngIf=\"item.subItems && item.expand\" class=\"fa fa-angle-up\"></i>\r\n            </a>\r\n           <ul *ngIf=\"item.subItems\" class=\"sub-menu\" [hidden]=\"!item.expand\">\r\n               <!--<li *ngFor=\"let subitem of item.subItems\" (click)=\"onItemClick(subitem)\"><a routerLink = '/desk'>{{subitem.title}}</a></li>-->\r\n               <li *ngFor=\"let subitem of item.subItems\"><a routerLink=\"desk\">{{subitem.title}}</a></li>\r\n           </ul>\r\n        </li>\r\n    </ul>\r\n</div>\r\n<span>\r\n    \r\n<!--<div class=\"cuppa-menu-overlay\" [ngClass]=\"{'show-overlay': menuState, 'hide-overlay': !menuState}\"></div> -->"
 
 /***/ }),
 
-/***/ "../../../../../src/environments/environment.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
-var environment = {
-    production: true
-};
-//# sourceMappingURL=D:/nodejss/pwa/slidemenu/sidebar/src/environment.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/main.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("../../../../../src/app/app.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
-
-
-
-
-if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* enableProdMode */])();
-}
-__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
-//# sourceMappingURL=D:/nodejss/pwa/slidemenu/sidebar/src/main.js.map
-
-/***/ }),
-
-/***/ 1:
+/***/ 569:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("../../../../../src/main.ts");
+module.exports = __webpack_require__(339);
 
 
 /***/ })
 
-},[1]);
+},[569]);
 //# sourceMappingURL=main.bundle.js.map

@@ -3,37 +3,43 @@
 <form>
   <div class="row">
     <div class="col-md-6 mb-3">
-      <label for="validationServer01">Asset Id#</label>
-      <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Asset Id" value="Key in Asset Id" required>
+      <label for="validationServer03">Asset Id</label>
+      <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Asset Id" required>
     </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationServer04">Severity</label>
+      <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="Severity" required>
+    </div>
+  </div>
+   <div class="row">
     <div class="col-md-6 mb-3">
-      <label for="validationServer02">Location</label>
-      <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Location" value="Location" required>
+      <label for="validationServer03">Category</label>
+      <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Category" required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationServer04">Sub Category</label>
+      <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="Sub Category" required>
     </div>
   </div>
   <div class="row">
     <div class="col-md-6 mb-3">
-      <label for="validationServer03">City</label>
-      <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="City" required>
-      <div class="invalid-feedback">
-        Please provide a valid city.
-      </div>
+      <label for="validationServer03">Subject</label>
+      <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Subject" required>
     </div>
     <div class="col-md-3 mb-3">
-      <label for="validationServer04">State</label>
-      <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="State" required>
-      <div class="invalid-feedback">
-        Please provide a valid state.
-      </div>
+      <label for="validationServer04">Date</label>
+      <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="Date" required>
+      
     </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationServer05">Zip</label>
-      <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="Zip" required>
-      <div class="invalid-feedback">
-        Please provide a valid zip.
+	</div>
+	<div class="row">
+    <div class="col-md-9 mb-9 mt-9">
+      <label for="validationServer05">Descritpion</label>
+	  <textarea class="form-control is-invalid" id="validationServer05" placeholder="Descritpion" required> </textarea>
       </div>
-    </div>
   </div>
+  <div class="row"></div>
+  
 
   <button class="btn btn-primary" type="submit">Submit form</button>
 </form>
