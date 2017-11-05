@@ -17,6 +17,7 @@ import { SlideMenu } from './slideMenu';
 import { ClickOutsideDirective } from './clickOutside';
 import {DeskComponent} from './desk.component';
 import {HomeComponent} from './home.component';
+import {SysAppComponent} from './sysapp.component';
 //routing import
 import {routing} from './app.routing';
 
@@ -28,6 +29,7 @@ import {routing} from './app.routing';
     AppComponent,
     DeskComponent,
     HomeComponent,
+    SysAppComponent,
     SlideMenu,
     ClickOutsideDirective
   ],
