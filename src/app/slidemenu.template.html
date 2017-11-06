@@ -13,7 +13,7 @@
             </a>
            <ul *ngIf="item.subItems" class="sub-menu" [hidden]="!item.expand">
                <!--<li *ngFor="let subitem of item.subItems" (click)="onItemClick(subitem)"><a routerLink = '/desk'>{{subitem.title}}</a></li>-->
-               <li *ngFor="let subitem of item.subItems"><a routerLink="desk">{{subitem.title}}</a></li>
+               <li *ngFor="let subitem of item.subItems"><a routerLink="desk"><img class="custom-img-size" alt="Brand" src="assets/img/glyphy/{{subitem.title}}.png">{{subitem.title}}</a></li>
            </ul>
         </li>
     </ul>

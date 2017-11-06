@@ -2,7 +2,7 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
     "version": "1.0.0-beta.32.3",
-    "name": "cuppa-ng2-slidemenu"
+    "name": "service-desk"
   },
   "apps": [
     {
@@ -22,7 +22,8 @@
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/font-awesome/css/font-awesome.min.css",
-        "assets/css/styles.css"
+        "assets/css/styles.css",
+        "assets/css/page-styles.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

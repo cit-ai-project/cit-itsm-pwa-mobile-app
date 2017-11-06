@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
                             {"title":"Software / Application Request","link":"#",
                               "subItems":[
                                             {"title":"Desktop Issue","link":"www.google.co.in"},
-                                            {"title":"Priter Issue","link":"#"},
+                                            {"title":"Printer Issue","link":"#"},
                                            ]
                             },
                             {"title":"Mobile Bill","link":"#"},

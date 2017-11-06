@@ -201,3 +201,9 @@ $transition-type: cubic-bezier(0.215, 0.610, 0.355, 1.000);
   -moz-transform: translateX(.4em) translateY(-.2em) rotate(-45deg);
   -webkit-transform: translateX(19px) translateY(-4px) rotate(-45deg);
 }
+
+.custom-img-size{
+width: 2rem;
+height: 2rem;
+margin-right: 1rem;
+}

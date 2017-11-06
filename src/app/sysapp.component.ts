@@ -15,7 +15,7 @@ import {
   selector: 'sysapp',
   encapsulation: ViewEncapsulation.None,
   styleUrls: [
-    './app.component.css'
+    './page-styles.css'
   ],
   templateUrl:'sysapp.component.html'
 })
