@@ -1,7 +1,7 @@
 
-.img-button{
+.form-heading{
     margin-top : 10rem;
-  /* background-color:lightcyan;*/
+    margin-bottom: 3rem;
     font-size: 2rem;
     font-family:'Franklin Gothic Medium';
 
@@ -15,8 +15,9 @@
     align-content: center;
     text-align: center;
     align-items: center;
-    vertical-align: center
-    
+    vertical-align: center;
+    border : 0;
+      
 
 }
    
@@ -24,6 +25,7 @@
         border: 0;
         box-shadow:none;
         margin:0;
+        margin-top:0;
         padding:0;
         background-color: lightblue;
         align-items: center
