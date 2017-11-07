@@ -28,41 +28,39 @@ export class AppComponent implements OnInit {
   private sMenu : SlideMenu;*/
 
     private menuItemsArray: any[] = [
-                            {"title":"Software / Application Request","link":"#",
+                          /*  {"title":"Home","link":"#"},*/
+                            {"title":" Hardware Request /  Issues ","link":"#",
                               "subItems":[
-                                            {"title":"Desktop Issue","link":"www.google.co.in"},
+                                            {"title":"Desktop Issue","link":"#"},
+                                            {"title":"Laptop Issue","link":"#"},
                                             {"title":"Printer Issue","link":"#"},
                                            ]
                             },
-                            {"title":"Mobile Bill","link":"#"},
-                            {"title":"Home and Kitchen","link":"#",
+                            {"title":"SoftWare / Application Request","link":"#",
                                 "subItems":[
-                                            {"title":"Furniture","link":"#"},
-                                            {"title":"Cookware","link":"#"},
+                                            {"title":"New Software Installation","link":"#"},
+                                            {"title":"Software Issue Request","link":"#"},
+                                            {"title":"Report Security Problem","link":"#"},
                                            ]
                             },
-                            {"title":"Car and Bike Accessories","link":"#",
+                            {"title":"Communication / Collaboration Request","link":"#",
                                 "subItems":[
-                                            {"title":"Tyres and Alloys","link":"#"},
-                                            {"title":"Comfort and Safety","link":"#"},
+                                            {"title":"Lotus Notes Issue","link":"#"},
+                                            {"title":"Share Point Issue","link":"#"},
                                            ]
                             },
-                            {"title":"Interior Design","link":"#",
+                            
+                            {"title":"File Share and Data Request","link":"#",
                                 "subItems":[
-                                            {"title":"Furniture","link":"#"},
-                                            {"title":"Matress and Flowers","link":"#"},
+                                            {"title":"Request access to Filestore","link":"#"},
+                                            {"title":"FileStore Unlock Request","link":"#"},
+                                            {"title":"Restore Deleted File","link":"#"},
                                            ]
                             },
-                            {"title":"Televisions","link":"#",
+                            {"title":"Network & Server Request","link":"#",
                                 "subItems":[
-                                            {"title":"Samsung","link":"#"},
-                                            {"title":"LG","link":"#"},
-                                           ]
-                            },
-                            {"title":"Computer Accessories","link":"#",
-                                "subItems":[
-                                            {"title":"Keyboards","link":"#"},
-                                            {"title":"Monitors","link":"#"},
+                                            {"title":"Network Access","link":"#"},
+                                            {"title":"Server Issue","link":"#"},
                                            ]
                             },
                         ];
