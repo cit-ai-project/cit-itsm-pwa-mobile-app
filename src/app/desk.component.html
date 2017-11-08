@@ -1,11 +1,24 @@
-<div class="container-fluid">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<div class="container-fluid form-background">
      <h3 class="form-heading">Desktop Issue Request Form</h3>
 <form>
   <div class="row">
     <div class="col-md-6 mb-3">
       <label for="validationServer03">Asset Id</label>
-      <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Asset Id" required>
+      <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="AZ59873" required>
     </div>
+
+    <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Low</a></li>
+      <li><a href="#">Medium</a></li>
+      <li><a href="#">High</a></li>
+      <li><a href="#">Critical</a></li>
+    </ul>
+  </div>
+
     <div class="col-md-3 mb-3">
       <label for="validationServer04">Severity</label>
       <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="Severity" required>

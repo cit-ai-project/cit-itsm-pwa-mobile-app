@@ -1,6 +1,6 @@
-.img-button{
+.form-background{
     margin-top : 10rem;
-  /* background-color:lightcyan;*/
+    background-color:lightcyan;
     font-size: 2rem;
     font-family:'Franklin Gothic Medium';
 
@@ -31,4 +31,9 @@
     .caption h4 {
         color: #fff;
         -webkit-font-smoothing: antialiased;
+    }
+
+    .img-size{
+        height: 25rem !important;
+        
     }

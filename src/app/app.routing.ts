@@ -7,8 +7,8 @@ import {HomeComponent} from  './home.component';
 import {SysAppComponent} from  './sysapp.component';
 
 const appRoutes: Routes =[
-    { path:'', component: HomeComponent },
-    { path:'home', component: HomeComponent },
+    { path:'', component: SysAppComponent },
+    { path:'home', component: SysAppComponent },
     { path:'desk', component: DeskComponent },
     { path:'sysapp', component: SysAppComponent }
 ]
