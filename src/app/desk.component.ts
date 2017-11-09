@@ -6,6 +6,8 @@ import {
   OnInit,
   ViewEncapsulation
 } from '@angular/core';
+/*import {DropdownModule} from "ng2-dropdown";
+import {DROPDOWN_DIRECTIVES} from 'ng2-bs-dropdown';*/
 
 /*
  * App Component
@@ -13,6 +15,7 @@ import {
  */
 @Component({
   selector: 'desk',
+  /* providers: [DROPDOWN_DIRECTIVES],*/
   encapsulation: ViewEncapsulation.None,
   styleUrls: [
     './app.component.css'

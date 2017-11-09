@@ -1,59 +1,63 @@
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <div class="container-fluid form-background">
-     <h3 class="form-heading">Desktop Issue Request Form</h3>
-<form>
-  <div class="row">
-    <div class="col-md-6 mb-3">
-      <label for="validationServer03">Asset Id</label>
-      <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="AZ59873" required>
-    </div>
-
-    <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li><a href="#">Low</a></li>
-      <li><a href="#">Medium</a></li>
-      <li><a href="#">High</a></li>
-      <li><a href="#">Critical</a></li>
-    </ul>
-  </div>
-
-    <div class="col-md-3 mb-3">
-      <label for="validationServer04">Severity</label>
-      <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="Severity" required>
-    </div>
-  </div>
-   <div class="row">
-    <div class="col-md-6 mb-3">
-      <label for="validationServer03">Category</label>
-      <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Category" required>
-    </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationServer04">Sub Category</label>
-      <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="Sub Category" required>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6 mb-3">
-      <label for="validationServer03">Subject</label>
-      <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Subject" required>
-    </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationServer04">Date</label>
-      <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="Date" required>
-      
-    </div>
-	</div>
-	<div class="row">
-    <div class="col-md-9 mb-9 mt-9">
-      <label for="validationServer05">Descritpion</label>
-	  <textarea class="form-control is-invalid" id="validationServer05" placeholder="Descritpion" required> </textarea>
+  <h3 class="form-heading">Desktop Issue Request Form</h3>
+  <form>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="validationServer03">Asset Id</label>
+        <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="AZ59873">
       </div>
-  </div>
-  <div class="row" style="height:30px;"></div>
-  
 
-  <button class="btn btn-primary spacing" type="submit">Submit</button>
+      <div class="col-md-3 mb-3">
+        <label for="validationServer04">Severity</label>
+        <select class="form-control form-control-sm">
+          <option>Low</option>
+          <option>Medium</option>
+          <option>High</option>
+          <option>Critical</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="validationServer03">Priority</label>
+        <select class="form-control form-control-sm">
+          <option>Low</option>
+          <option>Medium</option>
+          <option>High</option>
+          <option>Critical</option>
+        </select>
+      </div>
+       <div class="col-md-3 mb-3">
+        <label for="validationServer04">Category</label>
+        <select class="form-control form-control-sm">
+          <option>Request new Desktop</option>
+          <option>Monitor not switching On</option>
+          <option>CPU not switching On</option>
+          <option>CPU Fan is not working</option>
+          <option>Hard Disk Issue</option>
+          <option>Enable Speaker</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="validationServer03">Subject</label>
+        <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Subject" required>
+      </div>
+<!--      <div class="col-md-3 mb-3">
+        <label for="validationServer04">Date</label>
+        <input class="form-control" type="datetime-local" id="example-datetime-local-input">
+      </div>-->
+    </div>
+<div class="row">
+  <div class="col-md-9 mb-9 mt-9">
+    <label for="validationServer05">Descritpion</label>
+    <textarea class="form-control is-invalid" id="validationServer05" placeholder="Descritpion" required> </textarea>
+  </div>
+</div>
+<div class="row" style="height:30px;"></div>
+
+
+<button class="btn btn-primary spacing" type="submit">Submit</button>
 </form>
 </div>
