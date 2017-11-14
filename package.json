@@ -13,11 +13,11 @@
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --env=prod --ssl 1 --ssl-key \"D:\\nodejss\\pwa\\slidemenu\\sidebar\\node_modules\\browser-sync\\lib\\server\\certs\\server.key\" --ssl-cert \"D:\\nodejss\\pwa\\slidemenu\\sidebar\\node_modules\\browser-sync\\lib\\server\\certs\\server.crt\"",
+    "start": "ng serve --env=dev --ssl 1 --ssl-key \"D:\\nodejss\\pwa\\slidemenu\\sidebar\\node_modules\\browser-sync\\lib\\server\\certs\\server.key\" --ssl-cert \"D:\\nodejss\\pwa\\slidemenu\\sidebar\\node_modules\\browser-sync\\lib\\server\\certs\\server.crt\"",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "pwa": "ng build sw-precache && --env=prod --config=precache-config.js --delete-output-path=false --output-path=docs"
+    "pwa": "ng build sw-precache && --env=dev --config=precache-config.js --delete-output-path=false --output-path=docs"
   },
   "private": false,
   "dependencies": {
@@ -29,9 +29,11 @@
     "@angular/platform-browser": "^2.4.0",
     "@angular/platform-browser-dynamic": "^2.4.0",
     "@angular/router": "^3.4.0",
+    "@qontu/ngx-inline-editor": "^0.2.0-alpha.12",
     "bootstrap": "*",
     "core-js": "^2.4.1",
     "font-awesome": "*",
+    "ng2-inline-editor": "^0.1.1-alpha.12",
     "rxjs": "^5.1.0",
     "sw-precache-webpack-plugin-loader": "^1.0.2",
     "zone.js": "^0.7.6"

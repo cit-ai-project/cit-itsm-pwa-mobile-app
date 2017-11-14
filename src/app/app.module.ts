@@ -6,6 +6,8 @@ import {
   NgModule,
   ApplicationRef
 } from '@angular/core';
+import {InlineEditorModule} from 'ng2-inline-editor';
+
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -37,7 +39,8 @@ import {routing} from './app.routing';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    InlineEditorModule
   ],
   bootstrap: [ AppComponent ]
 })

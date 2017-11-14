@@ -24,6 +24,11 @@ import {DROPDOWN_DIRECTIVES} from 'ng2-bs-dropdown';*/
 })
 
 export class DeskComponent  {
+title = 'My component!';
+
+  asset = 'A123345';
+  user_name='Clement Rajesh';
+  username ="Clement";
 
     
 

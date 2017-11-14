@@ -1,7 +1,7 @@
 <div class="container-fluid form-background">
   <h3 class="form-heading">Desktop Issue Request Form</h3>
   <form>
-    <div class="row">
+    <!--<div class="row">
       <div class="col-md-6 mb-3">
         <label for="validationServer03">Asset Id</label>
         <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="AZ59873">
@@ -44,10 +44,6 @@
         <label for="validationServer03">Subject</label>
         <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="Subject" required>
       </div>
-<!--      <div class="col-md-3 mb-3">
-        <label for="validationServer04">Date</label>
-        <input class="form-control" type="datetime-local" id="example-datetime-local-input">
-      </div>-->
     </div>
 <div class="row">
   <div class="col-md-9 mb-9 mt-9">
@@ -56,8 +52,46 @@
   </div>
 </div>
 <div class="row" style="height:30px;"></div>
+-->
+    <div class="row">
+      Can you elobrate your issue for the system
+      <inline-editor type="text" [(ngModel)]="asset" (onSave)="saveEditable($event)" name="asset" size="10"></inline-editor>
+      <!--    Under the name
+      <inline-editor type="text" [(ngModel)]="user_name" (onSave)="saveEditable($event)" name="user_name" size="20"></inline-editor>
+   -->
+    </div>
+    <div class="row" style="height:30px;"></div>
+    <div class="row">
+      <div class="col-md-9 mb-9 mt-9">
+        <!--<label for="validationServer05">Descritpion</label>-->
+        <textarea class="form-control is-invalid" id="validationServer05" placeholder="Descritpion" required> </textarea>
+      </div>
+    </div>
 
+    <!--<a href="/desk" id="username" data-type="text" data-pk="1" data-url="" data-title="Enter username">superuser</a>
+    <script>
+      //$.fn.editable.defaults.mode = 'popup';
 
-<button class="btn btn-primary spacing" type="submit">Submit</button>
-</form>
+      $(document).ready(function () {
+        console.log("inside ready fn");
+        $('#username').editable();
+      });
+
+      $('#username').editable({
+
+        type: 'text',
+        title: 'Enter username',
+        success: function (response, newValue) {
+          console.log("inside succes fn");
+          userModel.set('username', newValue); //update backbone model
+        }
+      });
+    </script> -->
+    <div class="row" style="height:30px;"></div>
+    <div class="row">
+      <div class="col-12">
+        <button class="btn btn-primary pull-right !important" style="float:right" type="submit">Submit</button>
+      </div>
+    </div>
+  </form>
 </div>
