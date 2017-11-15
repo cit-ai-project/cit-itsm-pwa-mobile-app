@@ -55,19 +55,21 @@
 -->
     <div class="row">
       Can you elobrate your issue for the system
-      <inline-editor type="text" [(ngModel)]="asset" (onSave)="saveEditable($event)" name="asset" size="10"></inline-editor>
+      <inline-editor type="text" [(ngModel)]="asset" (onSave)="saveEditable()" name="asset" size="10"></inline-editor>
       <!--    Under the name
       <inline-editor type="text" [(ngModel)]="user_name" (onSave)="saveEditable($event)" name="user_name" size="20"></inline-editor>
    -->
     </div>
     <div class="row" style="height:30px;"></div>
-    <div class="row">
+    <div *ngIf="request != 'new'" class="row" id="description" >
       <div class="col-md-9 mb-9 mt-9">
         <!--<label for="validationServer05">Descritpion</label>-->
         <textarea class="form-control is-invalid" id="validationServer05" placeholder="Descritpion" required> </textarea>
       </div>
     </div>
+    
 
+    
     <!--<a href="/desk" id="username" data-type="text" data-pk="1" data-url="" data-title="Enter username">superuser</a>
     <script>
       //$.fn.editable.defaults.mode = 'popup';
@@ -87,8 +89,9 @@
         }
       });
     </script> -->
+
     <div class="row" style="height:30px;"></div>
-    <div class="row">
+    <div *ngIf="request != 'new'" class="row">
       <div class="col-12">
         <button class="btn btn-primary pull-right !important" style="float:right" type="submit">Submit</button>
       </div>

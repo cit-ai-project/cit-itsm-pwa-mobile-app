@@ -29,7 +29,15 @@ title = 'My component!';
   asset = 'A123345';
   user_name='Clement Rajesh';
   username ="Clement";
+  request ='existing';
 
-    
+
+    saveEditable(){
+        this.asset= this.asset;
+        if(this.asset =='new'){
+          this.request='new';
+        }
+
+      } 
 
 }
