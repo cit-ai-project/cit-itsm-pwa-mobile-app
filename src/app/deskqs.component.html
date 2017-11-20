@@ -1,0 +1,53 @@
+<div class="container-fluid form-background">
+  <h3 class="form-heading">Desktop Issue Request Form</h3>
+  <form>
+    <div class="row">
+      Could you help us to understand more on the problem.
+     </div>
+
+     <div class="row" style="height:40px;"></div>
+      <div class="row">
+      Whether its CPU or Monitor or Both?
+     </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="cpu" checked>
+       CPU
+      </label>
+    </div>
+    <div class="form-check">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="monitor">
+        Monitor
+        </label>
+    </div>
+    <div class="form-check disabled">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="both" disabled>
+        Both
+      </label>
+    </div>
+    <div class="row" style="height:40px;"></div>
+      <div class="row">
+      Have you checked the power cables connectivity and power mode
+     </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="poweryes" id="poweryes" value="poweryes" checked>
+       Yes
+      </label>
+    </div>
+    <div class="form-check">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="poweryes" id="poweryes" value="powerno">
+        No
+        </label>
+    </div>
+    <div class="row" style="height:30px;"></div>
+    <div *ngIf="request != 'new'" class="row">
+      <div class="col-12">
+        <button class="btn btn-primary pull-right !important" (click)="desktopQSSubmit()" style="float:right" type="submit">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -18,6 +18,7 @@ import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { SlideMenu } from './slideMenu';
 import { ClickOutsideDirective } from './clickOutside';
 import {DeskComponent} from './desk.component';
+import {DeskQSComponent} from './deskqs.component';
 import {HomeComponent} from './home.component';
 import {SysAppComponent} from './sysapp.component';
 //routing import
@@ -30,6 +31,7 @@ import {routing} from './app.routing';
   declarations: [
     AppComponent,
     DeskComponent,
+    DeskQSComponent,
     HomeComponent,
     SysAppComponent,
     SlideMenu,

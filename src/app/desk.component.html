@@ -17,6 +17,7 @@
     <div *ngIf="request != 'new'" class="row">
       <div class="col-12">
         <button class="btn btn-primary pull-right !important" (click)="desktopSubmit()" style="float:right" type="submit">Submit</button>
+        <deskqs [desktopissue]="desktopissue"></deskqs>
       </div>
     </div>
   </form>

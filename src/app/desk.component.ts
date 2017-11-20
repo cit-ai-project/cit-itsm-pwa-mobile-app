@@ -6,8 +6,9 @@ import {
   OnInit,
   ViewEncapsulation
 } from '@angular/core';
-/*import {DropdownModule} from "ng2-dropdown";
-import {DROPDOWN_DIRECTIVES} from 'ng2-bs-dropdown';*/
+import { Router } from '@angular/router';
+import {DesktopIssueForm} from './DesktopIssueForm';
+
 
 /*
  * App Component
@@ -15,7 +16,6 @@ import {DROPDOWN_DIRECTIVES} from 'ng2-bs-dropdown';*/
  */
 @Component({
   selector: 'desk',
-  /* providers: [DROPDOWN_DIRECTIVES],*/
   encapsulation: ViewEncapsulation.None,
   styleUrls: [
     './app.component.css'
@@ -29,67 +29,36 @@ export class DeskComponent {
 
   asset ='A1234';
   desktopissue = null;
+  description = 'descritpion';
 
 
-  constructor() {
-    this.desktopissue = new DektopIssueForm('A1234', 'Clement', 'existing', 'low', 'low', null);
-    this.asset = this.desktopissue.asset;
+  constructor(private router: Router) {
+    this.desktopissue = new DesktopIssueForm(this.asset, 'Clement', 'existing', 'low', 'low', null);
+    
   }
-  /*
-   desktop = { 
-    asset: String,
-    username:String,
-    request: String, // new or existing desktop
-    priority : String,
-    sevierity : String,
-    description : String }
+
   
-    desktopissue = null;
+
   
-    asset = "'A123345";
-    username ="Clement";
-    request ='existing';
-    priority ="Low";
-    sevierity="Low";
-    description="";
-  
-  
-      destopIssue(id){
-       var dektopIssue = new Object();
-       desktopIssue.id=101; 
-       
-  
-  
-  
-  } */
 
   saveEditable() {
-    this.desktopissue.asset = 'A123';
+    this.desktopissue.asset = this.asset;
 
   }
   desktopSubmit() {
-    this.desktopissue.description = 'description';
+    this.desktopissue.description = this.description;
     this.descriptionParserandValidator(this.desktopissue);
-    /*
-            // Before submit print all the values
-            console.log("asset >>"+this.asset);
-            console.log("user_name >>"+this.user_name);
-            console.log("username >>"+this.username);
-            console.log("request >>"+this.request);
-            console.log("priority >>"+this.priority);
-            console.log("sevierity >>"+this.sevierity);*/
 
-
-
-
+    this.router.navigate(['/deskqs']);
+    
   }
 
   descriptionParserandValidator(desktopIssueForm) {
 
-    if ((desktopIssueForm.description.indexOf("not working")) ||
+    if ((desktopIssueForm.description.indexOf("not work")) ||
       (desktopIssueForm.description.indexOf("not switch"))) {
 
-      desktopIssueForm.sevierity = "High";
+      desktopIssueForm.sevierity = "Medium";
       desktopIssueForm.priority = "High";
 
 
@@ -102,7 +71,7 @@ export class DeskComponent {
 }
 
 // Createe DesktopIssueForm
-class DektopIssueForm {
+/*export class DektopIssueForm {
 
   asset: String;
   username: String;
@@ -120,4 +89,4 @@ class DektopIssueForm {
     this.sevierity = insevierity;
     this.description = indescription;
   }
-}
+}*/
