@@ -1,4 +1,4 @@
-export class DesktopIssueForm {
+export class desktopIssueForm {
 
   asset: String;
   username: String;

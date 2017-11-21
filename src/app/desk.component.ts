@@ -7,7 +7,7 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 import { Router } from '@angular/router';
-import {DesktopIssueForm} from './DesktopIssueForm';
+import {desktopIssueForm} from './desktopIssueForm';
 
 
 /*
@@ -15,11 +15,13 @@ import {DesktopIssueForm} from './DesktopIssueForm';
  * Top Level Component
  */
 @Component({
+  /*providers : [desktopIssueForm],*/
   selector: 'desk',
   encapsulation: ViewEncapsulation.None,
   styleUrls: [
     './app.component.css'
   ],
+  
   templateUrl: 'desk.component.html'
 })
 
@@ -33,7 +35,7 @@ export class DeskComponent {
 
 
   constructor(private router: Router) {
-    this.desktopissue = new DesktopIssueForm(this.asset, 'Clement', 'existing', 'low', 'low', null);
+    this.desktopissue = new desktopIssueForm(this.asset, 'Clement', 'existing', 'low', 'low', null);
     
   }
 

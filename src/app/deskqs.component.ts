@@ -9,7 +9,7 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 import { Router } from '@angular/router';
-import {DesktopIssueForm} from './DesktopIssueForm';
+import {desktopIssueForm} from './desktopIssueForm';
 
 
 /*
@@ -22,12 +22,13 @@ import {DesktopIssueForm} from './DesktopIssueForm';
   styleUrls: [
     './app.component.css'
   ],
+  inputs :['desktopissue'],
   templateUrl: 'deskqs.component.html'
 })
 
 
 export class DeskQSComponent {
-    @Input() desktopissue : DesktopIssueForm;
+    @Input() desktopissue : desktopIssueForm;
   title = 'My component!';
 
   asset ='A1234';
