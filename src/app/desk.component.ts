@@ -28,6 +28,10 @@ import {desktopIssueForm} from './desktopIssueForm';
 
 export class DeskComponent {
   title = 'My component!';
+  isSubmitted: boolean;
+  isNewForm : boolean = true;
+  
+
 
   asset ='A1234';
   desktopissue = null;
@@ -39,10 +43,6 @@ export class DeskComponent {
     
   }
 
-  
-
-  
-
   saveEditable() {
     this.desktopissue.asset = this.asset;
 
@@ -50,8 +50,8 @@ export class DeskComponent {
   desktopSubmit() {
     this.desktopissue.description = this.description;
     this.descriptionParserandValidator(this.desktopissue);
-
-    this.router.navigate(['/deskqs']);
+    this.isSubmitted = true;
+    //this.router.navigate(['/deskqs']);
     
   }
 

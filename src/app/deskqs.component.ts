@@ -22,7 +22,6 @@ import {desktopIssueForm} from './desktopIssueForm';
   styleUrls: [
     './app.component.css'
   ],
-  inputs :['desktopissue'],
   templateUrl: 'deskqs.component.html'
 })
 

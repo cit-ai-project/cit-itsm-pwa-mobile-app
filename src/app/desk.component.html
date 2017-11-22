@@ -1,7 +1,7 @@
-<div class="container-fluid form-background">
+<div *ngIf="isNewForm"  class="container-fluid form-background">
   <h3 class="form-heading">Desktop Issue Request Form</h3>
   
-  <form>
+<!--  <form>-->
     <div class="row">
       Can you elobrate your issue for the system
       <inline-editor type="text" [(ngModel)]="asset" (onSave)="saveEditable()" name="asset" size="10"></inline-editor>
@@ -16,14 +16,15 @@
     </div>
 
     <div class="row" style="height:30px;"></div>
-    <div *ngIf="request != 'new'" class="row">
+    <div *ngIf="!isSubmitted" class="row">
       <div class="col-12">
-        <button class="btn btn-primary pull-right !important" (click)="desktopSubmit()" style="float:right" type="submit">Submit</button>
+        <button class="btn btn-primary pull-right !important" (click)="desktopSubmit()" style="float:right" type="submit">Next</button>
       </div>
     </div>
-  </form>
-
-  <div class="container">
-    <deskqs [desktopissue]="desktopissue"></deskqs>
-  </div>
+    
 </div>
+<div *ngIf="isSubmitted" class="container">
+    <deskqs [desktopissue]= "desktopissue"></deskqs>
+  </div>
+
+
