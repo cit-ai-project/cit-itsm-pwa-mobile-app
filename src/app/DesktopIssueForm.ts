@@ -1,19 +1,26 @@
 export class desktopIssueForm {
 
-  asset: String;
-  username: String;
-  request: String; // new or existing desktop
-  priority: String;
-  sevierity: String;
-  description: String;
+  asset: string;
+  username: string;
+  entity: string;// desktop or laptop or printer
+  problem: string; // not working, blinking, displaying, 
+  priority: string;
+  sevierity: string;
+  description: string;
+  intent: string;
+  action: string;
 
 
-  constructor(inasset: String, inusername: String, inrequest: String, inpriority: String, insevierity: String, indescription: String) {
+  constructor(inasset: string, inusername: string, inentity: string, inproblem: string, inpriority: string,
+    insevierity: string, inintent: string, indescription: string, inaction: string) {
     this.asset = inasset;
     this.username = inusername;
-    this.request = inrequest;
+    this.entity = inentity;
+    this.problem = inproblem;
     this.priority = inpriority;
     this.sevierity = insevierity;
     this.description = indescription;
+    this.intent = inintent;
+    this.action = inaction;
   }
 }

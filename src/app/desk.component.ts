@@ -36,10 +36,14 @@ export class DeskComponent {
   asset ='A1234';
   desktopissue = null;
   description = 'descritpion';
+  problem =["not work","not switch","not display","blinking","not work"];
+  entity = ['cpu','laptop','system','printer'];
+  entityResult : string;
+  problemResult :string;
 
 
   constructor(private router: Router) {
-    this.desktopissue = new desktopIssueForm(this.asset, 'Clement', 'existing', 'low', 'low', null);
+    this.desktopissue = new desktopIssueForm(this.asset, 'Clement', undefined, undefined, 'low', 'low', undefined,undefined,undefined);
     
   }
 
@@ -57,38 +61,29 @@ export class DeskComponent {
 
   descriptionParserandValidator(desktopIssueForm) {
 
-    if ((desktopIssueForm.description.indexOf("not work")) ||
-      (desktopIssueForm.description.indexOf("not switch"))) {
-
-      desktopIssueForm.sevierity = "Medium";
-      desktopIssueForm.priority = "High";
-
-
-
+    // To check the entity category
+     this.entityResult = contains(this.entity, desktopIssueForm.description)
+    if (this.entityResult !='notavailable') {
+       this.desktopissue.entity =this.entityResult;
     }
 
 
+    // To check the actual problem category
+     this.problemResult = contains(this.problem, desktopIssueForm.description)
+     if(this.problemResult !='notavailable') { 
+      this.desktopissue.problem =this.problemResult;
+      desktopIssueForm.sevierity = "Medium";
+      desktopIssueForm.priority = "High";
+    }
   }
 
 }
 
-// Createe DesktopIssueForm
-/*export class DektopIssueForm {
-
-  asset: String;
-  username: String;
-  request: String; // new or existing desktop
-  priority: String;
-  sevierity: String;
-  description: String;
-
-
-  constructor(inasset: String, inusername: String, inrequest: String, inpriority: String, insevierity: String, indescription: String) {
-    this.asset = inasset;
-    this.username = inusername;
-    this.request = inrequest;
-    this.priority = inpriority;
-    this.sevierity = insevierity;
-    this.description = indescription;
-  }
-}*/
+function contains(a, obj) {
+    for (var i = 0; i < a.length; i++) {
+        if (obj.indexOf(a[i])) {
+            return a[i];
+        }
+    }
+    return 'notavailable';
+}
