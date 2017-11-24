@@ -5,12 +5,13 @@
       Could you help us to understand more on the problem.
      </div>
 
-     <div class="row" style="height:40px;"></div>
-      <div class="row">
-      Whether its CPU or Monitor or Both?
+     <!--<div class="row" style="height:40px;"></div>-->
+     <!-- <div *ngIf="this.desktopissue.entity == 'cpu'"  class="row">-->
+      <div *ngIf="this.desktopissue.entity == 'cpu' || this.desktopissue.entity == 'system' || this.desktopissue.entity == 'monitor'"  class="row">
+      Whether the issue with CPU or Monitor or Both?
      </div>
     <div class="form-check">
-      <label class="form-check-label">
+       <label class="form-check-label">
         <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="cpu" checked>
        CPU
       </label>
