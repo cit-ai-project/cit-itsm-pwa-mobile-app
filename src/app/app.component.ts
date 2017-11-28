@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
   private sMenu : SlideMenu;*/
 
     private menuItemsArray: any[] = [
-                          /*  {"title":"Home","link":"#"},*/
+                    
                             {"title":" Hardware Request /  Issues ","link":"#",
                               "subItems":[
                                             {"title":"Desktop Issue","link":"#"},

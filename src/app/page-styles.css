@@ -1,9 +1,8 @@
 .form-background{
-    margin-top : 10rem;
-    background-color:lightcyan;
+    /*background-color:lightcyan;*/
     font-size: 2rem;
     font-family:'Franklin Gothic Medium';
-
+   
 }
 
  .caption {
@@ -22,7 +21,8 @@
         box-shadow:darkblue;
         margin:3rem;
         padding:0;
-        background-color: lightblue
+        background-color: lightblue;
+        max-width: 85% !important;
     
         
 
@@ -35,5 +35,6 @@
 
     .img-size{
         height: 25rem !important;
+       /* width : 15rem !important;*/
         
     }

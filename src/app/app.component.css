@@ -1,19 +1,31 @@
 
+.app-header{
+   background-color:white;
+}
+.app-body{
+   background-color:#0275d8
+}
+
 .form-background{
-    background-color: lightblue;
+    background-color: #0275d8;
 
 }
 .form-heading{
-    margin-top : 5rem;
     margin-bottom: 3rem;
     font-size: 2rem;
     font-family:'Franklin Gothic Medium';
+}
 
+.nav-custom{
+    line-height: 25px !important;
+    color: black !important;
+    margin-left: 5px !important;
+    padding-right : 20px;
 }
 
 .home-page{
     margin-top : 15rem;
-  /* background-color:lightcyan;*/
+   background-color:#fff;
     font-size: 2rem;
     font-family:'Franklin Gothic Medium';
     align-content: center;
@@ -69,9 +81,64 @@
 
         -webkit-font-smoothing: antialiased;
     }*/
+    .font-color{
+        color:white;
+    }
 
 .center-block {
     display: block;
     margin-left: auto;
     margin-right: auto;
  }
+
+ header
+
+  .logout-img-button{
+     align-items: right;
+     margin-right: px;
+     
+  }
+ 
+ .logout-img{
+     width: 25px;
+     height: 25px;
+ }
+ a {
+     color: white;
+ }
+
+ .fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+.cuppa-slide-left-margin{
+     margin-left: -10px;
+}
+
+.cuppa-left-margin{
+     margin-left: 5px;
+     width: 2rem;
+}
+
+@media(min-width:992px){
+    .sysapp-container {
+        width : 50% !important;
+    }
+}
+
+@media(max-width:768px){
+    .sysapp-container {
+        width : 80% !important;
+    }
+}
+
+@media(max-width:576px){
+    .sysapp-container {
+        width : 100% !important;
+    }
+}
+
+.card-right-left-auto{
+    right:auto;
+    left:auto;
+}

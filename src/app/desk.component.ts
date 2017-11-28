@@ -26,7 +26,7 @@ export class DeskComponent {
   isNewForm : boolean = true;
   asset ='A1234';
   desktopissue = null;
-  description = 'descritpion';
+  description = '';
   problem =["not work","not switch","not display","blink","blue screen"];
   problemsyn =["NWork","NSwitch","NDisplay","Blink","BScreen"];
   entity = ['cpu','monitor','system','keyboard'];
