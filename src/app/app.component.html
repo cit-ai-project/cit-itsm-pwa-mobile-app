@@ -1,30 +1,51 @@
-<nav class="navbar navbar-fixed-top navbar-light bg-light cuppa-slide-left-margin">
-  <div class="container-fluid">
-    <div class="navbar-header d-flex w-100">
-     <table>
-       <tbody>
-         <tr>
-           <td class="align-middle">
-      <cuppa-slidemenu [menulist]="menuItemsArray" (open)="onMenuOpen()" (close)="onMenuClose()"></cuppa-slidemenu>
-           </td>
-     <td class="align-middle w-50% h-25%">
-         <img alt="Brand" class="cuppa-left-margin" src="assets/img/cuppa-logo.png">
-     </td>
-      <td class="align-middle">
-        <span class="text-nowrap">IT Service Desk Menu</span>
-      </td>
-      <td class="align-middle">
-        <span class="fill-remaining-space"></span>
-      <button type="button " class="btn btn-link">
-         <!-- <img  class="logout-img" src="assets/img/logout3.png"/>-->
-         <span class="fa fa-2x fa-sign-out align-right"></span>
+<!--<nav class="navbar navbar-fixed-top navbar-light bg-light w-100">
+  <div class="w-100">
+    <div class="navbar-header d-flex w-100" sytle="padding-right:0px">
+      <table class="w-100%">
+        <tbody>
+          <tr>
+            <td class="col-1 align-middle w-100">
+              <cuppa-slidemenu [menulist]="menuItemsArray" (open)="onMenuOpen()" (close)="onMenuClose()"></cuppa-slidemenu>
+            </td>
+            <td class="col-10 align-middle w-100 h-25 text-nowrap">
+              <img alt="Brand" class="cuppa-left-margin " src="assets/img/cuppa-logo.png">
+              <span class="text-nowrap">IT Service Desk Menu</span>
+            </td>
+            <td class="col-1 align-right w-100" sytle="padding-right:0px">
+
+              <button type="button " class="btn btn-link align-right w-100%">
+
+         <span class="fa fa-2x fa-sign-out fill-remaining-space"></span>
       </button>
-      </td>
-         </tr>
-       </tbody>
-     </table>
-    </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   </div>
   </div>
+</nav>-->
+
+<nav class="navbar navbar-fixed-top navbar-light bg-light w-100">
+  <table class="w-100">
+    <tbody>
+      <tr>
+        <td class="col-md-2 align-left w-100">
+          <cuppa-slidemenu [menulist]="menuItemsArray" (open)="onMenuOpen()" (close)="onMenuClose()"></cuppa-slidemenu>
+        </td>
+        <td class="col-md-8 align-center w-100 h-25 text-nowrap">
+          <img alt="Brand" class="cuppa-left-margin " src="assets/img/cuppa-logo.png">
+          <span class="text-nowrap">IT Service Desk Menu</span>
+        </td>
+        <td class="col-md-2 align-right w-100">
+
+          <button type="button " class="btn btn-link align-right w-100 pad-left">
+
+         <span class="fa fa-2x fa-sign-out fill-remaining-space"></span>
+      </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </nav>
 <div class="container-fluid app-body">
   <router-outlet></router-outlet>

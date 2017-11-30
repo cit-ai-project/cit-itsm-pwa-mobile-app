@@ -4,10 +4,12 @@
     <div class="row">
       Could you help us to understand more on the problem.
      </div>
-
+     <div class="row"></div>
      <!--<div class="row" style="height:40px;"></div>-->
      <!-- <div *ngIf="this.desktopissue.entity == 'cpu'"  class="row">-->
-      <div *ngIf="this.desktopissue.entity == 'cpu' || this.desktopissue.entity == 'system' || this.desktopissue.entity == 'monitor'"  class="row">
+      <!--<div *ngIf="this.desktopissue.entity == 'cpu' || this.desktopissue.entity == 'system' || this.desktopissue.entity == 'monitor'"  class="row">-->
+
+    <div *ngIf="desktopissue.entity === 'system'"  class="row">
       Whether the issue with CPU or Monitor or Both?
      </div>
     <div class="form-check">
@@ -22,15 +24,18 @@
         Monitor
         </label>
     </div>
-    <div class="form-check disabled">
+    <div class="form-check">
     <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="both" disabled>
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="both">
         Both
       </label>
     </div>
+    
+    
+    
     <div class="row" style="height:40px;"></div>
       <div class="row">
-      Have you checked the power cables connectivity and power mode
+      Have you checked the power cables connectivity and power mode, still are you not able to get in?
      </div>
     <div class="form-check">
       <label class="form-check-label">
@@ -47,7 +52,7 @@
     <div class="row" style="height:30px;"></div>
     <div *ngIf="request != 'new'" class="row">
       <div class="col-12">
-        <button class="btn btn-primary pull-right !important" (click)="desktopQSSubmit()" style="float:right" type="submit">Submit</button>
+        <button class="btn btn-success pull-right !important" (click)="desktopQSSubmit()" style="float:right" type="submit">Submit</button>
       </div>
     </div>
   </form>

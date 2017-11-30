@@ -12,7 +12,8 @@
 }
 .form-heading{
     margin-bottom: 3rem;
-    font-size: 2rem;
+    font-size: 1.4rem;
+    padding-top: 1rem;
     font-family:'Franklin Gothic Medium';
 }
 
@@ -26,7 +27,7 @@
 .home-page{
     margin-top : 15rem;
    background-color:#fff;
-    font-size: 2rem;
+    font-size: 1rem;
     font-family:'Franklin Gothic Medium';
     align-content: center;
     text-align: center;
@@ -104,7 +105,7 @@
      height: 25px;
  }
  a {
-     color: white;
+     color: #0275d8;
  }
 
  .fill-remaining-space {
@@ -141,4 +142,12 @@
 .card-right-left-auto{
     right:auto;
     left:auto;
+}
+.card-text-mb{
+    margin-bottom: -1.1rem !important;
+    color : black;
+}
+
+.pad-left{
+    padding-left : 2rem;
 }
