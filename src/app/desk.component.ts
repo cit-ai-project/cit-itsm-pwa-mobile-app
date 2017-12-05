@@ -27,8 +27,8 @@ export class DeskComponent {
   asset ='A1234';
   desktopissue = null;
   description = '';
-  problem =["not work","not switch","not display","blink","blue screen"];
-  problemsyn =["NWork","NSwitch","NDisplay","Blink","BScreen"];
+  problem =["not work","not switch","not display","blink","blue screen", "unable"];
+  problemsyn =["NWork","NSwitch","NDisplay","Blink","BScreen","NWork"];
   entity = ['cpu','monitor','system','keyboard'];
   entityResult : string;
   problemResult :string;

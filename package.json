@@ -13,7 +13,7 @@
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --env=prod --ssl true --ssl-key \"E:\\nodeproj\\pwa\\sidebar\\sidebar\\node_modules\\browser-sync\\lib\\server\\certs\\server.key\" --ssl-cert \"E:\\nodeproj\\pwa\\sidebar\\sidebar\\node_modules\\browser-sync\\lib\\server\\certs\\server.crt\"",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

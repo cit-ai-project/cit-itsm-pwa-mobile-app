@@ -1,58 +1,75 @@
 <div class="container-fluid form-background">
-  <!--<h3 class="form-heading">Desktop Issue Request Form</h3>-->
   <form>
-    <div class="row">
-      Could you help us to understand more on the problem.
-     </div>
-     <div class="row"></div>
-     <!--<div class="row" style="height:40px;"></div>-->
-     <!-- <div *ngIf="this.desktopissue.entity == 'cpu'"  class="row">-->
-      <!--<div *ngIf="this.desktopissue.entity == 'cpu' || this.desktopissue.entity == 'system' || this.desktopissue.entity == 'monitor'"  class="row">-->
+    <div *ngIf="this.desktopissue.problem != 'BScreen'">
+      <div class="row">
+        Could you help us to understand more about the problem.
+      </div>
+    </div>
+    <!--     <p> Test desktopissue: {{this.desktopissue.entity}} </p>-->
+    <div class="row" style="height:20px;"></div>
+    <div *ngIf="this.desktopissue.entity === 'system'">
 
-    <div *ngIf="desktopissue.entity === 'system'"  class="row">
-      Whether the issue with CPU or Monitor or Both?
-     </div>
-    <div class="form-check">
-       <label class="form-check-label">
+      <div class="row">
+        Whether the issue with CPU or Monitor or Both?
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
         <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="cpu" checked>
        CPU
       </label>
-    </div>
-    <div class="form-check">
-    <label class="form-check-label">
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
         <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="monitor">
         Monitor
         </label>
-    </div>
-    <div class="form-check">
-    <label class="form-check-label">
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
         <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="both">
         Both
       </label>
+      </div>
     </div>
-    
-    
-    
-    <div class="row" style="height:40px;"></div>
+
+    <div *ngIf="this.desktopissue.problem != 'BScreen'">
+      <div class="row" style="height:20px;"></div>
       <div class="row">
-      Have you checked the power cables connectivity and power mode, still are you not able to get in?
-     </div>
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="poweryes" id="poweryes" value="poweryes" checked>
+        Have you checked the power cables connectivity and power mode?, still are you not able to get in?
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+        <input type="radio" onchange="document.getElementById('formSsubmit').disabled = !this.checked; 
+        document.getElementById('showmsg').style.display = 'block';
+        document.getElementById('shownomsg').style.display = 'none';" class="form-check-input" name="poweryes" id="poweryes" value="poweryes" checked>
        Yes
       </label>
-    </div>
-    <div class="form-check">
-    <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="poweryes" id="poweryes" value="powerno">
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+        <input type="radio" onchange="document.getElementById('formSsubmit').disabled = this.checked; 
+        document.getElementById('showmsg').style.display = 'none';
+        document.getElementById('shownomsg').style.display = 'block';" class="form-check-input" name="poweryes" id="powerno" value="powerno">
         No
         </label>
+      </div>
+
+      <div class="row hidden" id="shownomsg" style="display:none">
+        <div class="row" style="height:20px;"></div>
+        Check the power cables and connectivity before proceed further.
+      </div>
     </div>
+    <!--<p> Test desktopissue: {{this.infMsgRq}} </p>-->
+    <div class="row" id="showmsg">
+      <div class="row" style="height:20px;"></div>
+      Proceed with submit button to create a requst to check by IT service desk.
+    </div>
+
+
     <div class="row" style="height:30px;"></div>
-    <div *ngIf="request != 'new'" class="row">
+    <div class="row">
       <div class="col-12">
-        <button class="btn btn-success pull-right !important" (click)="desktopQSSubmit()" style="float:right" type="submit">Submit</button>
+        <button class="btn btn-success pull-right !important" (click)="desktopQSSubmit()" style="float:right" type="submit" id="formSsubmit">Submit</button>
       </div>
     </div>
   </form>

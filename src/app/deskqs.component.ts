@@ -2,9 +2,9 @@
 /*
  * Angular 2 decorators and services
  */
-import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
-import {desktopIssueForm} from './desktopIssueForm';
+import { desktopIssueForm } from './desktopIssueForm';
 
 
 /*
@@ -22,20 +22,21 @@ import {desktopIssueForm} from './desktopIssueForm';
 
 
 export class DeskQSComponent {
-    @Input() desktopissue : desktopIssueForm;
+  infMsgRq: boolean = true;
+  @Input() desktopissue: desktopIssueForm;
   title = 'My component!';
 
-   description = 'descritpion';
+  description = 'descritpion';
 
 
   constructor() {
-       
+
   }
 
- desktopQSSubmit() {
-   console.log("desktopQSSubmit"+"destop issue");
-   this.desktopissue;
-   this.desktopissue;
+  desktopQSSubmit() {
+    console.log("desktopQSSubmit" + "destop issue");
+    this.desktopissue;
+    this.desktopissue;
 
   }
 
@@ -47,6 +48,14 @@ export class DeskQSComponent {
       desktopIssueForm.sevierity = "Medium";
       desktopIssueForm.priority = "High";
     }
+  }
+
+  infMsgRqfn() {
+    if (this.infMsgRq === true)
+      return true;
+    else
+      return false;
+
   }
 
 }
