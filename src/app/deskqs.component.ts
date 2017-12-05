@@ -22,7 +22,7 @@ import { desktopIssueForm } from './desktopIssueForm';
 
 
 export class DeskQSComponent {
-  infMsgRq: boolean = true;
+
   @Input() desktopissue: desktopIssueForm;
   title = 'My component!';
 
@@ -50,12 +50,8 @@ export class DeskQSComponent {
     }
   }
 
-  infMsgRqfn() {
-    if (this.infMsgRq === true)
-      return true;
-    else
-      return false;
-
-  }
+/*enableDisableMessage(){
+  
+}*/
 
 }
