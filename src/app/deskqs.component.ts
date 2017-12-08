@@ -5,6 +5,7 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { desktopIssueForm } from './desktopIssueForm';
+import { PostdataService } from './postdata.service';
 
 
 /*
@@ -26,18 +27,21 @@ export class DeskQSComponent {
   @Input() desktopissue: desktopIssueForm;
   title = 'My component!';
 
-  description = 'descritpion';
+  description = '';
+  isSecondPage :boolean =false;
 
 
-  constructor() {
+  constructor(private PostdataService: PostdataService) {
 
   }
 
-  desktopQSSubmit() {
-    console.log("desktopQSSubmit" + "destop issue");
-    this.desktopissue;
-    this.desktopissue;
-
+  desktopQSKSubmit() {
+    // call node server
+    //var response = this.PostdataService.getTicketCreated(this.desktopissue);
+   // console.log(" Response ==>"+ response);
+   if(this.desktopissue.longDescReqd ==='yes'){
+   this.isSecondPage = true;
+   }
   }
 
   descriptionParserandValidator(desktopIssueForm) {
@@ -50,8 +54,8 @@ export class DeskQSComponent {
     }
   }
 
-/*enableDisableMessage(){
-  
-}*/
+  /*enableDisableMessage(){
+    
+  }*/
 
 }

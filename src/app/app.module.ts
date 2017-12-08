@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 //import { plateformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
 import {
   NgModule,
   ApplicationRef
@@ -24,6 +25,10 @@ import {SysAppComponent} from './sysapp.component';
 //routing import
 import {routing} from './app.routing';
 
+import { PostdataService }  from './postdata.service';
+import { DesksdComponent } from './desksd/desksd.component';
+//import {desktopIssueForm} from './desktopIssueForm';
+
 /**
  * `AppModule` is the main entry point into Angular2's bootstraping process
  */
@@ -35,7 +40,9 @@ import {routing} from './app.routing';
     HomeComponent,
     SysAppComponent,
     SlideMenu,
-    ClickOutsideDirective
+    ClickOutsideDirective,
+    DesksdComponent,
+    //desktopIssueForm
   ],
   imports: [ // import Angular's modules
     BrowserModule,
@@ -44,6 +51,7 @@ import {routing} from './app.routing';
     routing,
     InlineEditorModule
   ],
+  providers : [PostdataService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {

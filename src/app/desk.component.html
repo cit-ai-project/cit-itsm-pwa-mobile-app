@@ -1,31 +1,48 @@
-<div *ngIf="isNewForm"  class="container-fluid form-background text-light">
+<div *ngIf="isNewForm" class="container-fluid form-background text-light" style="padding-bottom:2.5rem">
 
   <h5 class="form-heading">Desktop Issue Request</h5>
-  
-<!--  <form>-->
-    <div class="row ">
-      Elobrate your issue for the system
-      <inline-editor type="text" [(ngModel)]="asset" (onSave)="saveEditable()" name="asset" size="10"></inline-editor>
-    </div>
-    <div class="row" style="height:30px;"></div>
-    <div *ngIf="request != 'new'" class="row" id="descriptionbox">
-      <div class="col-md-9 mb-9 mt-9">
-        <!--<label for="validationServer05">Descritpion</label>-->
-        <textarea class="form-control is-invalid" [(ngModel)]="description" id="validationServer05" name="description" placeholder="Descritpion"
-          required> </textarea>
-      </div>
-    </div>
 
-    <div class="row" style="height:30px;"></div>
-    <div *ngIf="!isSubmitted" class="row">
-      <div class="col-12">
-        <button class="btn btn-primary pull-right !important" (click)="desktopSubmit()" style="float:right" type="submit">Continue..</button>
-      </div>
+  <!--  <form>-->
+  <div class="row ">
+    Can you provide a brief description of the problem for the asset
+    <inline-editor type="text" [(ngModel)]="asset" (onSave)="saveEditable()" name="asset" size="10"></inline-editor>
+  </div>
+  <div class="row" style="height:30px;"></div>
+  <div *ngIf="request != 'new'" class="row" id="descriptionbox">
+    <div class="col-md-9 mb-9 mt-9">
+      <!--<label for="validationServer05">Descritpion</label>-->
+      <textarea style="height:150px" class="form-control is-invalid" [(ngModel)]="shortDescription" id="validationServer05" name="description"
+        placeholder="Short Descritpion" required> </textarea>
     </div>
-    
-</div>
-<div *ngIf="isSubmitted" class="container-fluid form-background text-light">
-    <deskqs [desktopissue]= "desktopissue"></deskqs>
   </div>
 
+  <div class="row" style="height:30px;"></div>
+  <!--<div *ngIf="this.desktopissue.entity === 'system'">-->
 
+  <div class="row">
+    Would you like to give a detailed narration of the problem?
+  </div>
+  <div class="row" style="height:10px;"></div>
+  <div class="form-check">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" [(ngModel)]="longDescReqd" name="optionsRadios" id="narration1" value="yes" checked>
+       Yes
+      </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" [(ngModel)]="longDescReqd" name="optionsRadios" id="narration2" value="no">
+        No
+        </label>
+  </div>
+
+  <div *ngIf="!isSubmitted" class="row text-center">
+    <div class="col-12">
+      <button class="btn btn-success" (click)="desktopSubmit()" style="float:center" type="submit">Continue..</button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="isSubmitted" class="container-fluid form-background text-light">
+  <deskqs [desktopissue]="desktopissue"></deskqs>
+</div>

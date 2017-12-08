@@ -1,76 +1,114 @@
-<div class="container-fluid form-background">
-  <form>
-    <div *ngIf="this.desktopissue.problem != 'BScreen'">
-      <div class="row">
-        Could you help us to understand more about the problem.
+<div *ngIf="this.desktopissue.longDescReqd === 'yes' && !isSecondPage" class="container-fluid form-background text-light"
+  style="padding-bottom:2.5rem">
+
+  <h5 class="form-heading ">Desktop Issue Request</h5>
+  <div *ngIf="this.desktopissue.longDescReqd === 'yes'">
+    <div class="row ">
+      Please provide detail description
+    </div>
+    <div class="row" style="height:40px;"></div>
+    <div *ngIf="request != 'new'" class="row" id="descriptionbox">
+      <div class="col-md-9 mb-9 mt-9">
+        <!--<label for="validationServer05">Descritpion</label>-->
+        <textarea style="height:300px" class="form-control is-invalid" [(ngModel)]="description" id="validationServer05" name="description"
+          placeholder="Long Descritpion" required> </textarea>
       </div>
     </div>
-    <!--     <p> Test desktopissue: {{this.desktopissue.entity}} </p>-->
-    <div class="row" style="height:20px;"></div>
-    <div *ngIf="this.desktopissue.entity === 'system'">
+  </div>
+  <div class="row" style="height:20px;"></div>
+  <div class="row text-center">
+    <div class="col-12">
+      <button class="btn btn-success" (click)="desktopQSKSubmit()" type="submit"> Next ...</button>
+    </div>
+  </div>
+</div>
 
-      <div class="row">
-        Whether the issue with CPU or Monitor or Both?
-      </div>
-      <div class="form-check">
-        <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="cpu" checked>
-       CPU
+
+<div *ngIf="isSecondPage" class="container-fluid form-background text-light" style="padding-bottom:2.5rem">
+  <h5 class="form-heading ">Desktop Issue Request</h5>
+  <div class="row" style="height:20px;"></div>
+
+  <div class="row">
+    In your openion how sever is your problem?
+  </div>
+  <div class="row" style="height:50px;"></div>
+  <div class="form-check">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="critical" checked>
+       Criticl(Not able to work at all)
       </label>
-      </div>
-      <div class="form-check">
-        <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="monitor">
-        Monitor
+  </div>
+  <div class="form-check">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="high">
+        High(Highly impact produtivity)
         </label>
-      </div>
-      <div class="form-check">
-        <label class="form-check-label">
-        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="both">
-        Both
-      </label>
-      </div>
-    </div>
-
-    <div *ngIf="this.desktopissue.problem != 'BScreen'">
-      <div class="row" style="height:20px;"></div>
-      <div class="row">
-        Have you checked the power cables connectivity and power mode?, still are you not able to get in?
-      </div>
-      <div class="form-check">
-        <label class="form-check-label">
-        <input type="radio" onchange="document.getElementById('formSsubmit').disabled = !this.checked; 
-        document.getElementById('showmsg').style.display = 'block';
-        document.getElementById('shownomsg').style.display = 'none';" class="form-check-input" name="poweryes" id="poweryes" value="poweryes" checked>
-       Yes
-      </label>
-      </div>
-      <div class="form-check">
-        <label class="form-check-label">
-        <input type="radio" onchange="document.getElementById('formSsubmit').disabled = this.checked; 
-        document.getElementById('showmsg').style.display = 'none';
-        document.getElementById('shownomsg').style.display = 'block';" class="form-check-input" name="poweryes" id="powerno" value="powerno">
-        No
+  </div>
+  <div class="form-check">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="medium">
+        Medium(Medium impact)
         </label>
-      </div>
-
-      <div class="row hidden" id="shownomsg" style="display:none">
-        <div class="row" style="height:20px;"></div>
-        Check the power cables and connectivity before proceed further.
-      </div>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios4" value="low">
+        Low(Not an urgent)
+        </label>
+  </div>
+  <div class="row" style="height:30px;"></div>
+  <div class="row text-center">
+    <div class="col-12">
+      <button class="btn btn-success" (click)="desktopQSKSubmit()" type="submit">Done</button>
     </div>
-    <!--<p> Test desktopissue: {{this.infMsgRq}} </p>-->
-    <div class="row" id="showmsg">
-      <div class="row" style="height:20px;"></div>
-      Proceed with submit button to create a requst to check by IT service desk.
-    </div>
+  </div>
+</div>
 
 
-    <div class="row" style="height:30px;"></div>
-    <div class="row">
-      <div class="col-12">
-        <button class="btn btn-success pull-right !important" (click)="desktopQSSubmit()" style="float:right" type="submit" id="formSsubmit">Submit</button>
-      </div>
+<div *ngIf="this.desktopissue.longDescReqd === 'no'" class="container-fluid form-background text-light" style="padding-bottom:2.5rem">
+  <h5 class="form-heading ">Desktop Issue Request</h5>
+
+  <div class="row" style="height:20px;"></div>
+  <div class="row ">
+    No worries, I will consider your brief description as the detailed narraion of the problem
+  </div>
+
+  <div class="row" style="height:20px;"></div>
+
+  <div class="row">
+    In your openion how sever is your problem?
+  </div>
+  <div class="row" style="height:20px;"></div>
+  <div class="form-check">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="critical" checked>
+       Criticl(Not able to work at all)
+      </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="high">
+        High(Highly impact produtivity)
+        </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="medium">
+        Medium(Medium impact)
+        </label>
+  </div>
+  <div class="form-check">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios4" value="low">
+        Low(Not an urgent)
+        </label>
+  </div>
+  <div class="row" *ngIf="this.desktopissue.longDescReqd === 'no'" style="height:20px">
+  </div>
+  <div class="row" style="height:30px;"></div>
+  <div class="row text-center">
+    <div class="col-12">
+      <button class="btn btn-success" (click)="desktopQSKSubmit()" type="submit">Done</button>
     </div>
-  </form>
+  </div>
 </div>

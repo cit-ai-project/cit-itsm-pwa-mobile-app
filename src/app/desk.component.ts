@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import {desktopIssueForm} from './desktopIssueForm';
 
 
+
 /*
  * App Component
  * Top Level Component
@@ -26,7 +27,9 @@ export class DeskComponent {
   isNewForm : boolean = true;
   asset ='A1234';
   desktopissue = null;
-  description = '';
+  shortDescription = '';
+  longDescReqd = 'yes';
+  l
   problem =["not work","not switch","not display","blink","blue screen", "unable"];
   problemsyn =["NWork","NSwitch","NDisplay","Blink","BScreen","NWork"];
   entity = ['cpu','monitor','system','keyboard'];
@@ -34,8 +37,8 @@ export class DeskComponent {
   problemResult :string;
 
 
-  constructor(private router: Router) {
-    this.desktopissue = new desktopIssueForm(this.asset, 'Clement', undefined, undefined, 'low', 'low', undefined,undefined,undefined);
+  constructor() {
+    this.desktopissue = new desktopIssueForm(this.asset, 'Clement', undefined, undefined, 'low', 'low', undefined,undefined,undefined,undefined,undefined);
     
   }
 
@@ -44,10 +47,12 @@ export class DeskComponent {
 
   }
   desktopSubmit() {
-    this.desktopissue.description = this.description;
-    this.descriptionParserandValidator(this.desktopissue);
+    this.desktopissue.shortDescription = this.shortDescription;
+    this.desktopissue.longDescReqd = this.longDescReqd;
+    //this.descriptionParserandValidator(this.desktopissue);
     this.isSubmitted = true;
-    //this.router.navigate(['/deskqs']);
+    this.isNewForm = false;
+   // this.router.navigate(['/deskqs']);
     
   }
 
