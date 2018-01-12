@@ -8,14 +8,14 @@ export class PostdataService {
 
   constructor(private http: Http) { }
 
-  private appUrl = 'http://localhost:8080';  // URL to web api
+  private appUrl = 'http://localhost:1337'  //'http://192.168.60.222';  // URL to web api
   private headers = new Headers({
     'Content-Type': 'application/json'
   });
 
 
   getConsoleLogExecuted(): Promise<string[]> {
-    return this.http.get(this.appUrl.concat("/api/client"))
+    return this.http.get(this.appUrl.concat("/api/helpdesk"))
       .toPromise()
       .then(response => response.json().data as string[])
       .catch(this.handleError);
@@ -24,7 +24,9 @@ export class PostdataService {
 
   getTicketCreated(desktopIssue: desktopIssueForm): Promise<desktopIssueForm> {
     console.log("JSON stringfy ::" + JSON.stringify(desktopIssue));
-    const url = `${this.appUrl.concat("/api/Ticket")}/${desktopIssue.asset}`;
+    //const url = `${this.appUrl.concat("/api/helpdesk/userTicket/")}/${desktopIssue.asset}`;
+    const url = `${this.appUrl.concat("/api/helpdesk/userTicket/create?ticket_title='Monitor not working'&ticket_desc='Monitor is not switching on'&priority=1&severity=1&status=1&asset='ram-lp'&created_by='S8888'")}`;
+    console.log(" URL formed >>"+ url);
     const options = new RequestOptions({
       method: RequestMethod.Post,
       headers: this.headers,
@@ -35,7 +37,9 @@ export class PostdataService {
     return this.http
       .post(url, JSON.stringify(desktopIssue))
       .toPromise()
-      .then((response) => desktopIssue)
+      .then(response => {
+          return response.json().data ;
+      })
       .catch(this.handleError);
   }
   private handleError(error: any): Promise<any> {

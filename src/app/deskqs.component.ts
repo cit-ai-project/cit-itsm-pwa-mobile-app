@@ -37,7 +37,7 @@ export class DeskQSComponent {
 
   desktopQSKSubmit() {
     // call node server
-    //var response = this.PostdataService.getTicketCreated(this.desktopissue);
+    var response = this.PostdataService.getTicketCreated(this.desktopissue);
    // console.log(" Response ==>"+ response);
    if(this.desktopissue.longDescReqd ==='yes'){
    this.isSecondPage = true;
