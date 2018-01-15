@@ -38,7 +38,11 @@ export class PostdataService {
       .post(url, JSON.stringify(desktopIssue))
       .toPromise()
       .then(response => {
-          return response.json().data ;
+          desktopIssue.success = response.json().success;
+          desktopIssue.ticketNo = response.json().TicketNo;
+          desktopIssue.submitted ='yes';
+          return desktopIssue;
+          
       })
       .catch(this.handleError);
   }

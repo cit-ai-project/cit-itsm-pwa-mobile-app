@@ -11,6 +11,9 @@ export class desktopIssueForm {
   longDescReqd : string;
   intent: string;
   action: string;
+  success : string;
+  ticketNo: string;
+  submitted : string;
 
 
   constructor(inasset: string, inusername: string, inentity: string, inproblem: string, inpriority: string,
@@ -27,5 +30,8 @@ export class desktopIssueForm {
     this.longDescReqd = inlongDescReqd;
     this.intent = inintent;
     this.action = inaction;
+    this.success = null;
+    this.ticketNo = null;
+    this.submitted = null;
   }
 }

@@ -24,7 +24,7 @@
 </div>
 
 
-<div *ngIf="isSecondPage" class="container-fluid form-background text-light" style="padding-bottom:2.5rem">
+<div *ngIf="isSecondPage && !this.desktopissue.submitted === 'yes'" class="container-fluid form-background text-light" style="padding-bottom:2.5rem">
   <h5 class="form-heading ">Desktop Issue Request</h5>
   <div class="row" style="height:20px;"></div>
 
@@ -65,7 +65,7 @@
 </div>
 
 
-<div *ngIf="this.desktopissue.longDescReqd === 'no'" class="container-fluid form-background text-light" style="padding-bottom:2.5rem">
+<div *ngIf="this.desktopissue.longDescReqd === 'no' && !this.desktopissue.submitted === 'yes'" class="container-fluid form-background text-light" style="padding-bottom:2.5rem">
   <h5 class="form-heading ">Desktop Issue Request</h5>
 
   <div class="row" style="height:20px;"></div>
@@ -111,4 +111,28 @@
       <button class="btn btn-success" (click)="desktopQSKSubmit()" type="submit">Done</button>
     </div>
   </div>
+</div>
+
+
+
+
+<div *ngIf="this.desktopissue.submitted === 'yes'" class="container-fluid form-background text-light" style="padding-bottom:2.5rem">
+  <h5 class="form-heading ">Desktop Issue Request</h5>
+
+  <div class="row" style="height:20px;"></div>
+  <div class="row ">
+    Ticket have been created. You can use below ticket number for future reference
+  </div>
+  <div class="row" style="height:20px;"> </div>
+     <h1> {{this.ticketNo}} </h1>
+
+     <ul>
+    <li *ngFor="let desk of this.desktopissue">
+      {{ desk.ticketNo }}
+    </li>
+  </ul>
+
+  
+
+  
 </div>

@@ -29,6 +29,7 @@ export class DeskQSComponent {
 
   description = '';
   isSecondPage :boolean =false;
+  ticketNo =null;
 
 
   constructor(private PostdataService: PostdataService) {
@@ -41,7 +42,8 @@ export class DeskQSComponent {
    // console.log(" Response ==>"+ response);
    if(this.desktopissue.longDescReqd ==='yes'){
    this.isSecondPage = true;
-   }
+  }
+  this.ticketNo = this.desktopissue.ticketNo;
   }
 
   descriptionParserandValidator(desktopIssueForm) {
