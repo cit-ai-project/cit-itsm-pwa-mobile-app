@@ -28,22 +28,21 @@ export class DeskQSComponent {
   title = 'My component!';
 
   description = '';
-  isSecondPage :boolean =false;
-  ticketNo =null;
-
+  isSecondPage: boolean = false;
 
   constructor(private PostdataService: PostdataService) {
-
   }
 
   desktopQSKSubmit() {
     // call node server
-    var response = this.PostdataService.getTicketCreated(this.desktopissue);
-   // console.log(" Response ==>"+ response);
-   if(this.desktopissue.longDescReqd ==='yes'){
-   this.isSecondPage = true;
-  }
-  this.ticketNo = this.desktopissue.ticketNo;
+    var response = this.PostdataService.getTicketCreated(this.desktopissue).then(response => {
+
+      // console.log(" Response ==>"+ response);
+      if (this.desktopissue.longDescReqd === 'yes') {
+        this.isSecondPage = true;
+      }
+    });
+
   }
 
   descriptionParserandValidator(desktopIssueForm) {

@@ -65,7 +65,8 @@
 </div>
 
 
-<div *ngIf="this.desktopissue.longDescReqd === 'no' && !this.desktopissue.submitted === 'yes'" class="container-fluid form-background text-light" style="padding-bottom:2.5rem">
+<div *ngIf="this.desktopissue.longDescReqd === 'no' && this.desktopissue.submitted === 'no'" class="container-fluid form-background text-light"
+  style="padding-bottom:2.5rem">
   <h5 class="form-heading ">Desktop Issue Request</h5>
 
   <div class="row" style="height:20px;"></div>
@@ -124,15 +125,10 @@
     Ticket have been created. You can use below ticket number for future reference
   </div>
   <div class="row" style="height:20px;"> </div>
-     <h1> {{this.ticketNo}} </h1>
-
-     <ul>
-    <li *ngFor="let desk of this.desktopissue">
-      {{ desk.ticketNo }}
-    </li>
-  </ul>
-
-  
-
-  
+    <div class="row center text-center">
+    <span> Ticket No :  </span>
+    <span [innerHTML]="desktopissue.ticketNo"></span>
+    </div>
+  </div>
+  <div class="row" style="height:20px;">
 </div>
