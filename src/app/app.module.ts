@@ -16,7 +16,7 @@ import { ENV_PROVIDERS } from './environment';
 // App is our top level component
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
-import { SlideMenu } from './slideMenu';
+//import { SlideMenu } from './slideMenu';
 import { ClickOutsideDirective } from './clickOutside';
 import {DeskComponent} from './desk.component';
 import {DeskQSComponent} from './deskqs.component';
@@ -39,7 +39,7 @@ import { DesksdComponent } from './desksd/desksd.component';
     DeskQSComponent,
     HomeComponent,
     SysAppComponent,
-    SlideMenu,
+   // SlideMenu,
     ClickOutsideDirective,
     DesksdComponent,
     //desktopIssueForm
