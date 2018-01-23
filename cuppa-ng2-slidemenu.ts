@@ -1,1 +1,1 @@
-export * from './src/app/slideMenuNavigation/slideMenu'
+export * from './src/app/slideMenuNavigation/slideMenu';
