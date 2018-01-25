@@ -6,7 +6,7 @@
     Please provide detail description
   </div>
   <div class="row" style="height:30px;"></div>
-  <div *ngIf="request != 'new'" class="row" id="descriptionbox">
+  <div *ngIf="(request != 'new')" class="row" id="descriptionbox">
     <div class="col-md-9 mb-9 mt-9">
       <!--<label for="validationServer05">Descritpion</label>-->
       <textarea style="height:250px" class="form-control is-invalid" [(ngModel)]="description" id="validationServer05" name="description"

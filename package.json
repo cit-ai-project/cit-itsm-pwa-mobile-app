@@ -1,6 +1,7 @@
 {
-  "name": "cuppa-ng2-slidemenu",
+  "name": "cit-servicedesk-app",
   "comment": "start : ng serve --env=prod --ssl true --ssl-key \"E:\\nodeproj\\pwa\\sidebar\\sidebar\\node_modules\\browser-sync\\lib\\server\\certs\\server.key\" --ssl-cert \"E:\\nodeproj\\pwa\\sidebar\\sidebar\\node_modules\\browser-sync\\lib\\server\\certs\\server.crt\"",
+  "commen": "pwa: ng build sw-precache && --env=dev --config=precache-config.js --delete-output-path=false --output-path=docs",
   "version": "1.0.1",
   "description": "An Angular 2 slide out navigation menu for web and mobile. Also, called as slide menu.",
   "keywords": [
@@ -13,12 +14,9 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "pwa": "ng build sw-precache && --env=dev --config=precache-config.js --delete-output-path=false --output-path=docs"
+    "start" : "ng serve --prod --ssl true --ssl-key \"E:\\nodeproj\\pwa\\sidebar\\sidebar\\node_modules\\browser-sync\\lib\\server\\certs\\server.key\" --ssl-cert \"E:\\nodeproj\\pwa\\sidebar\\sidebar\\node_modules\\browser-sync\\lib\\server\\certs\\server.crt\"",
+    "firebuild":"ng build --prod --output-path=docs",
+    "firestart": "firebase deploy"
   },
   "private": false,
   "dependencies": {
@@ -30,9 +28,10 @@
     "@angular/platform-browser": "^5.2.1",
     "@angular/platform-browser-dynamic": "^5.2.1",
     "@angular/router": "^5.2.1",
+    "@angular/service-worker": "^5.2.1",
     "@qontu/ngx-inline-editor": "^0.2.0-alpha.12",
     "body-parser": "^1.18.2",
-    "bootstrap": "^4.0.0",
+    "bootstrap": "4.0.0-beta.2",
     "core-js": "^2.5.3",
     "express": "^4.16.2",
     "font-awesome": "*",
@@ -43,6 +42,7 @@
     "popper": "^1.0.1",
     "rxjs": "^5.5.6",
     "sw-precache-webpack-plugin-loader": "^1.0.2",
+    "sw-toolbox": "^3.6.0",
     "tether": "^1.4.3",
     "zone.js": "^0.8.20"
   },

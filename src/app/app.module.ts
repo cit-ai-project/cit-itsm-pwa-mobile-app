@@ -1,3 +1,5 @@
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 //import { plateformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { FormsModule } from '@angular/forms';
@@ -49,7 +51,8 @@ import { DesksdComponent } from './desksd/desksd.component';
     FormsModule,
     HttpModule,
     routing,
-    InlineEditorModule
+    InlineEditorModule,
+     ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
   ],
   providers : [PostdataService],
   bootstrap: [ AppComponent ]
